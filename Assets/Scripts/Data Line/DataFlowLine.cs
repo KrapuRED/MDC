@@ -8,6 +8,9 @@ public class DataFlowLine : MonoBehaviour
     [SerializeField] private DataFlowLineDirection direction;
     [SerializeField] private DataFlowLineSpeed speed;
 
+    [Header("Reference Object")]
+    [SerializeField] private DataFlowLineDataSpawner dataFlowLineDataSpawner;
+
     [Header("Test Data Line")]
     [SerializeField] private Color right = Color.red;
     [SerializeField] private Color left = Color.yellow;
@@ -24,6 +27,8 @@ public class DataFlowLine : MonoBehaviour
         {
             SwapPosition();
         }
+
+        dataFlowLineDataSpawner.IntilizeDataSpawner(config.spawnInterval ,config.groupSpawnConfigList, config.dataSpawnConfigList);
     }
 
     private void OnDrawGizmos()

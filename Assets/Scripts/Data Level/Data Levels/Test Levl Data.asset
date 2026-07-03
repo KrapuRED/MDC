@@ -12,4 +12,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67d542d792180742a9bcadb8578e5c0, type: 3}
   m_Name: Test Levl Data
   m_EditorClassIdentifier: 
-  dataFlowLineDataList: []
+  dataFlowLineDataList:
+  - dataFlowLineName: 'TEST DATA FLOW '
+    dataFlowLineDirection: 2
+    dataFlowLineSpeed: 0
+    spawnInterval: 0
+    groupSpawnConfigList:
+    - groupName: Group 1
+      groupPrefabs: {fileID: 2702702922196006720, guid: 4eff5d6bde7fd4547a3524db872fff3e, type: 3}
+      change: 50
+    - groupName: Group 2
+      groupPrefabs: {fileID: 3580099569036639630, guid: 1573db21401a9d54ca8e5a393f401b9f, type: 3}
+      change: 50
+    dataSpawnConfigList:
+    - dataName: False
+      dataType: 0
+      change: 25
+    - dataName: Violation
+      dataType: 1
+      change: 25
+    - dataName: Education
+      dataType: 2
+      change: 25
+    - dataName: Violation
+      dataType: 1
+      change: 25
+  - dataFlowLineName: 'TEST DATA FLOW '
+    dataFlowLineDirection: 2
+    dataFlowLineSpeed: 0
+    spawnInterval: 0
+    groupSpawnConfigList:
+    - groupName: Group 1
+      groupPrefabs: {fileID: 2702702922196006720, guid: 4eff5d6bde7fd4547a3524db872fff3e, type: 3}
+      change: 50
+    - groupName: Group 2
+      groupPrefabs: {fileID: 3580099569036639630, guid: 1573db21401a9d54ca8e5a393f401b9f, type: 3}
+      change: 50
+    dataSpawnConfigList:
+    - dataName: False
+      dataType: 0
+      change: 25
+    - dataName: Violation
+      dataType: 1
+      change: 25
+    - dataName: Education
+      dataType: 2
+      change: 25
+    - dataName: Entertainment
+      dataType: 3
+      change: 25
