@@ -38,12 +38,15 @@ public class GroupDataMover : MonoBehaviour
     {
         if (_endPosition == null)
         {
-            Debug.LogError($"[{gameObject.name} - GroupDataMover] Start or End position is not assigned.");
+            Debug.LogWarning($"[{gameObject.name} - GroupDataMover] Start or End position is not assigned.");
             return;
         }
 
         if (DistanceCheck())
+        {
+            Destroy(gameObject);
             return;
+        }
 
         Debug.Log($"[{gameObject.name} - GroupDataMover] Moving group data...");
         

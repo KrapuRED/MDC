@@ -28,7 +28,7 @@ public class DataFlowLine : MonoBehaviour
             SwapPosition();
         }
 
-        dataFlowLineDataSpawner.IntilizeDataSpawner(config.spawnInterval ,config.groupSpawnConfigList, config.dataSpawnConfigList);
+        dataFlowLineDataSpawner.IntilizeDataSpawner(config);
     }
 
     private void OnDrawGizmos()

@@ -18,6 +18,7 @@ public class GroupSpawnConfig
 {
     public string groupName;
     public GameObject groupPrefabs;
+    [Range(0, 100)]
     public int change;
 }
 
@@ -26,6 +27,7 @@ public class DataSpawnConfig
 {
     public string dataName;
     public DataType dataType;
+    [Range(0, 100)]
     public int change;
 }
 
@@ -39,7 +41,8 @@ public class DataFlowLineData
 
     [Header("Data Flow Line Spawner Config")]
     //Spawn interval in seconds
-    public float spawnInterval;
+    public float spawnIntervalMin;
+    public float spawnIntervalMax;
     //Spawner groups change
     public List<GroupSpawnConfig> groupSpawnConfigList = new();
     //Data Spawn Change

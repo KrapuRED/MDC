@@ -328,4 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd8487b66851064a9e21008a575887a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPosition: {fileID: 9153443861527978230}
+  endPosition: {fileID: 8405313781269413739}
   spawnInterval: 0
+  spawnerContainer: {fileID: 0}

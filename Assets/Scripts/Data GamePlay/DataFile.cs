@@ -2,9 +2,12 @@ using UnityEngine;
 
 public class DataFile : MonoBehaviour, IDragable, IHoverable
 {
-    private Vector2 dragOffset2D;
+
+    [SerializeField] private DataType dataType;
 
     private GroupData _ownerData;
+
+    public DataType DataType => dataType;
 
     private void OnEnable()
     {
@@ -14,6 +17,11 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log($"[{gameObject.name}] is interact with cursor");
+    }
+
+    public void SetDataType(DataType type)
+    {
+        dataType = type;
     }
 
     private void OnCollisionStay2D(Collision2D collision)

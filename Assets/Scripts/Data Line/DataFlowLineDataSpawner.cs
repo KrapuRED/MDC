@@ -6,24 +6,53 @@ public class DataFlowLineDataSpawner : MonoBehaviour
     [Header("Data Line Spawner Data Config")]
     [SerializeField] private Transform startPosition;
     [SerializeField] private Transform endPosition;
-    [SerializeField] private float spawnInterval = 1f;
-    
+    [SerializeField] private float spawnIntervalMin;
+    [SerializeField] private float spawnIntervalMax;
+    [SerializeField] private Transform spawnerContainer;
+
+    [Header("Data Secure Spawner Config")]
+    [SerializeField] private Transform lastSpawnGroup;
+    [SerializeField] private float secureDistance = 6f;
+    [SerializeField] private bool isSecureSpawn = true;
+
     private List<GroupSpawnConfig> _groupSpawnConfig = new ();
     private List<DataSpawnConfig> _dataSpawnConfig = new();
 
-    public void IntilizeDataSpawner(float spawnRate, List<GroupSpawnConfig> groupConfig, List<DataSpawnConfig> dataConfig)
+    private void Update()
     {
-        if (groupConfig == null || dataConfig == null)
+        CheckDistanceToLastGroup();
+    }
+
+    private void CheckDistanceToLastGroup()
+    {
+        if (lastSpawnGroup == null)
         {
-            Debug.LogError("GroupSpawnConfig or DataSpawnConfig is null. Please provide valid configurations.");
+            isSecureSpawn = true;
             return;
         }
 
-        spawnInterval = spawnRate;
-        _groupSpawnConfig = groupConfig;
-        _dataSpawnConfig = dataConfig;
+        float distance = Vector2.Distance(lastSpawnGroup.position, startPosition.position);
+        if (distance > secureDistance)
+        {
+            isSecureSpawn = true;
+        }
+    }
 
-        StartGenerateData();
+    public void IntilizeDataSpawner(DataFlowLineData config)
+    {
+        if (config == null)
+        {
+            Debug.LogError("The Data Flow Line Config is null. Please provide valid configurations.");
+            return;
+        }
+
+        spawnIntervalMin = config.spawnIntervalMin;
+        spawnIntervalMax = config.spawnIntervalMax;
+
+        _groupSpawnConfig = config.groupSpawnConfigList;
+        _dataSpawnConfig = config.dataSpawnConfigList;
+
+        GenerateData();
     }
 
     private GameObject GetRandomGroupData()
@@ -44,31 +73,25 @@ public class DataFlowLineDataSpawner : MonoBehaviour
         return null;
     }
 
-    private DataType GetRandomDataType()
+    public void GenerateData()
     {
-        int totalWeight = 0;
-        foreach (var config in _dataSpawnConfig)
-            totalWeight += config.change;
-
-        int randomValue = Random.Range(0, totalWeight);
-        int cumulative = 0;
-
-        for (int i = 0; i < _dataSpawnConfig.Count; i++)
-        {
-            cumulative += _dataSpawnConfig[i].change;
-            if (randomValue < cumulative)
-                return _dataSpawnConfig[i].dataType;
+        if (!isSecureSpawn) 
+        { 
+            return; 
         }
-        return DataType.None;
-    }
 
-    public void StartGenerateData()
-    {
-        var groupPrefab = GetRandomGroupData();
-        var dataType    = GetRandomDataType();
+        isSecureSpawn = false;
 
-        Debug.Log($"[{transform.parent.name} - StartGenerateData] groupPrefab: {groupPrefab}, dataType: {dataType}");
         // 1) Fill the group with data based on the group spawn config
-        // 2) Initilize Group Mover
+        var groupPrefab = GetRandomGroupData();
+        
+        GameObject groupInstance = Instantiate(groupPrefab, startPosition.position, Quaternion.identity, spawnerContainer);
+        string newName = $"{transform.parent.name} - {groupInstance.name}";
+        groupInstance.name = newName;
+        GroupData groupData = groupInstance.GetComponent<GroupData>();
+
+        lastSpawnGroup = groupInstance.transform;
+
+        groupData.FillGroup(_dataSpawnConfig, endPosition);
     }
 }
