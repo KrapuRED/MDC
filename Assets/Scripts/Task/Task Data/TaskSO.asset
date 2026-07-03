@@ -15,5 +15,11 @@ MonoBehaviour:
   taskSOName: 
   taskDataList:
   - taskName: Intercept False Information
-    interceptedDataCount: 7
+    interceptedDataCount: 1
     dataType: 0
+  - taskName: Intercept personal
+    interceptedDataCount: 7
+    dataType: 5
+  - taskName: Intercept Entertainment
+    interceptedDataCount: 7
+    dataType: 3

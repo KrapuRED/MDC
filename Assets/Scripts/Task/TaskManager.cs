@@ -13,6 +13,7 @@ public class TaskManager : MonoBehaviour
     public static TaskManager Instance { get; private set; }
 
     [SerializeField] private List<ActiveTaskData> activeTasks = new();
+    [SerializeField] private TaskUIController taskUIController;
 
     public TaskSO testTaksData;
 
@@ -36,6 +37,7 @@ public class TaskManager : MonoBehaviour
 
     public void InitializTaskManager(TaskSO taskData)
     {
+        activeTasks.Clear();
         foreach (var task in taskData.taskDataList)
         {
             activeTasks.Add(new ActiveTaskData
@@ -44,6 +46,7 @@ public class TaskManager : MonoBehaviour
                 currentInterceptedDataCount = 0
             });
         }
+        taskUIController.InitializTaskBoard(activeTasks);
     }
 
     private void CheckTaskCompletion(ActiveTaskData activeTask)
@@ -63,9 +66,12 @@ public class TaskManager : MonoBehaviour
             {
                 activeTask.currentInterceptedDataCount++;
                 Debug.Log($"Task [{activeTask.taskData.taskName}] progress: {activeTask.currentInterceptedDataCount}/{activeTask.taskData.interceptedDataCount}");
+                taskUIController.UpdateTaskBoard(activeTask);
                 CheckTaskCompletion(activeTask);
                 return;
             }
         }
+
+        PlayerHealthManager.Instance.OnTakingDamage();
     }
 }

@@ -94,6 +94,7 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
         }
 
         Debug.Log($"[{gameObject.name}] crashed into [{other.gameObject.name}]");
+        PlayerHealthManager.Instance.OnTakingDamage();
 
         other.destroyCoroutine = other.StartCoroutine(other.DestroyAfterDelay(other.crashDestroyDelay));
         destroyCoroutine = StartCoroutine(DestroyAfterDelay(crashDestroyDelay));
