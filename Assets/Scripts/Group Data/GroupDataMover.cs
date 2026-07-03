@@ -4,7 +4,7 @@ public class GroupDataMover : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
 
-    private Transform _endPosition;
+    [SerializeField] private Transform _endPosition;
     [SerializeField] private bool isInitialized = false;
 
     private void Update()

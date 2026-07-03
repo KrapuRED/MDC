@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "name": "GamePlayInput",
+    "maps": [
+        {
+            "name": "Mouse",
+            "id": "1b3ed8a3-63a6-4cef-9ae7-4bf80f2898b5",
+            "actions": [
+                {
+                    "name": "Drag",
+                    "type": "Button",
+                    "id": "44a8a680-f21f-48be-a937-8494a1f5a703",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Position",
+                    "type": "Value",
+                    "id": "ccc46d4a-5e69-4c0a-9c78-9e5f67d46650",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "09ced339-ce71-4f5d-83cd-6829cae66a17",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Drag",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "841029a1-b6bb-4543-af15-9b92c397f07d",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

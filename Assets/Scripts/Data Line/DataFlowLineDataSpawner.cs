@@ -46,20 +46,19 @@ public class DataFlowLineDataSpawner : MonoBehaviour
 
     private DataType GetRandomDataType()
     {
+        int totalWeight = 0;
+        foreach (var config in _dataSpawnConfig)
+            totalWeight += config.change;
 
-        int cumulativeChance = 0;
+        int randomValue = Random.Range(0, totalWeight);
+        int cumulative = 0;
 
         for (int i = 0; i < _dataSpawnConfig.Count; i++)
         {
-            cumulativeChance += _dataSpawnConfig[i].change;
-            int randomValue = Random.Range(0, 100);
-
-            if (randomValue < cumulativeChance)
-            {
+            cumulative += _dataSpawnConfig[i].change;
+            if (randomValue < cumulative)
                 return _dataSpawnConfig[i].dataType;
-            }
         }
-
         return DataType.None;
     }
 
