@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 33a7a193e0498bf44904239ab2016e46
+guid: f331658f1941378429fde4c9cb667b3e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8047240813476067490
-    second: DeskScene_Computer_0
+      213: 53481413928686350
+    second: GameplayScene_UI_ContentindicatorPanel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DeskScene_Computer_0
+      name: GameplayScene_UI_ContentindicatorPanel_0
       rect:
         serializedVersion: 2
-        x: 206
-        y: 59
-        width: 806
-        height: 689
+        x: 1487
+        y: 29
+        width: 422
+        height: 698
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2a8344d32ea8daf60800000000000000
-      internalID: 8047240813476067490
+      spriteID: e031e4700110eb000800000000000000
+      internalID: 53481413928686350
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DeskScene_Computer_0: 8047240813476067490
+      GameplayScene_UI_ContentindicatorPanel_0: 53481413928686350
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
