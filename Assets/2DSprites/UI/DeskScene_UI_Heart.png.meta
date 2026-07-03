@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: c37c6dfa8de3dce4c8c9241278d82855
+guid: 256a368a60778c443ac33a496c79a6bb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2873157816678574778
-    second: DeskScene_OfficeBG_0
+      213: 318097227038135636
+    second: DeskScene_UI_Heart_0
+  - first:
+      213: -9206803749955559361
+    second: DeskScene_UI_Heart_1
+  - first:
+      213: 1410829694167708545
+    second: DeskScene_UI_Heart_2
+  - first:
+      213: -8694577154483059774
+    second: DeskScene_UI_Heart_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DeskScene_OfficeBG_0
+      name: DeskScene_UI_Heart_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 56
+        y: 14
+        width: 164
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aba63c6cfc18fd720800000000000000
-      internalID: 2873157816678574778
+      spriteID: 45515ad1ebb1a6400800000000000000
+      internalID: 318097227038135636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeskScene_UI_Heart_1
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 32
+        width: 128
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f302a27e4ccda3080800000000000000
+      internalID: -9206803749955559361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeskScene_UI_Heart_2
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 32
+        width: 128
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1837077c126449310800000000000000
+      internalID: 1410829694167708545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeskScene_UI_Heart_3
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 14
+        width: 164
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c38fc2d428a65780800000000000000
+      internalID: -8694577154483059774
       vertices: []
       indices: 
       edges: []
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DeskScene_OfficeBG_0: 2873157816678574778
+      DeskScene_UI_Heart_0: 318097227038135636
+      DeskScene_UI_Heart_1: -9206803749955559361
+      DeskScene_UI_Heart_2: 1410829694167708545
+      DeskScene_UI_Heart_3: -8694577154483059774
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
