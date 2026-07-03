@@ -17,10 +17,25 @@ public class DataFlowLineDataSpawner : MonoBehaviour
 
     private List<GroupSpawnConfig> _groupSpawnConfig = new ();
     private List<DataSpawnConfig> _dataSpawnConfig = new();
+    private float currentSpawnInterval;
+    private bool isIntilize;
 
     private void Update()
     {
+        if (!isIntilize) return;
+
         CheckDistanceToLastGroup();
+
+        if (currentSpawnInterval <= 0f && isSecureSpawn)
+        {
+            GenerateData();
+            currentSpawnInterval = Random.Range(spawnIntervalMin, spawnIntervalMax);
+        }
+        else
+        {
+            currentSpawnInterval -= Time.deltaTime;
+        }
+
     }
 
     private void CheckDistanceToLastGroup()
@@ -52,7 +67,7 @@ public class DataFlowLineDataSpawner : MonoBehaviour
         _groupSpawnConfig = config.groupSpawnConfigList;
         _dataSpawnConfig = config.dataSpawnConfigList;
 
-        GenerateData();
+        isIntilize = true;
     }
 
     private GameObject GetRandomGroupData()

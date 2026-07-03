@@ -40,12 +40,9 @@ public class DataFlowLineData
     public DataFlowLineSpeed dataFlowLineSpeed;
 
     [Header("Data Flow Line Spawner Config")]
-    //Spawn interval in seconds
     public float spawnIntervalMin;
     public float spawnIntervalMax;
-    //Spawner groups change
     public List<GroupSpawnConfig> groupSpawnConfigList = new();
-    //Data Spawn Change
     public List<DataSpawnConfig> dataSpawnConfigList = new();
 }
 

@@ -58,10 +58,6 @@ public class DataFlowLineManager : MonoBehaviour
 
     private void BuildDataFlowLines(Transform dataFlowLinePoint, DataFlowLineData config)
     {
-        // 1) Read Data flow lines direction
-        Debug.Log($"[DataFlowLineManager] Building Data Flow Lines for: {dataFlowLinePoint.name} with data {config.dataFlowLineName} and direction to {config.dataFlowLineDirection}");
-        
-        // 2) Build Data flow lines
         DataFlowLine dataFlowLine = dataFlowLinePoint.GetComponent<DataFlowLine>();
         if (dataFlowLine == null )
         {

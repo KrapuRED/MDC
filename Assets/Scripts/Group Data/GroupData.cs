@@ -19,8 +19,6 @@ public class GroupData : MonoBehaviour
 
     public void FillGroup(List<DataSpawnConfig> dataSpawnConfig, Transform endPoint)
     {
-        Debug.Log($"[{gameObject.name} - GroupData] Filling group with data...");
-
         maxDataCount = dataSlots.Count;
         dataCount = Mathf.Clamp(dataCount, 1, dataSlots.Count);
 
@@ -36,7 +34,6 @@ public class GroupData : MonoBehaviour
         {
             Debug.Log("Data group is filled to max capacity.");
             groupDataMover.InitializeMover(endPoint);
-            TestSpawnedDatas();
         }
     }
 
@@ -56,13 +53,5 @@ public class GroupData : MonoBehaviour
                 return dataSpawnConfig[i].dataType;
         }
         return DataType.None;
-    }
-
-    private void TestSpawnedDatas()
-    {
-        foreach (var data in _spawnedData)
-        {
-            Debug.Log($"Spawned Data Type: {data.DataType}");
-        }
     }
 }

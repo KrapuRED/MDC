@@ -131,10 +131,10 @@ TextureImporter:
       name: IconSheet_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 29
-        width: 56
-        height: 56
+        x: 30
+        y: 30
+        width: 54
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +153,10 @@ TextureImporter:
       name: IconSheet_1
       rect:
         serializedVersion: 2
-        x: 143
-        y: 29
-        width: 56
-        height: 56
+        x: 144
+        y: 30
+        width: 54
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,10 +175,10 @@ TextureImporter:
       name: IconSheet_2
       rect:
         serializedVersion: 2
-        x: 257
-        y: 29
-        width: 56
-        height: 56
+        x: 258
+        y: 30
+        width: 54
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +197,10 @@ TextureImporter:
       name: IconSheet_3
       rect:
         serializedVersion: 2
-        x: 371
-        y: 29
-        width: 56
-        height: 56
+        x: 372
+        y: 30
+        width: 54
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,10 +219,10 @@ TextureImporter:
       name: IconSheet_4
       rect:
         serializedVersion: 2
-        x: 485
-        y: 29
-        width: 56
-        height: 56
+        x: 486
+        y: 30
+        width: 54
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,10 +241,10 @@ TextureImporter:
       name: IconSheet_5
       rect:
         serializedVersion: 2
-        x: 599
-        y: 29
-        width: 56
-        height: 56
+        x: 600
+        y: 30
+        width: 54
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: df87a4e0a2c1b574eb8aadb428974169
     internalID: 0
     vertices: []
     indices: 

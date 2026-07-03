@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4927864263199339470}
   - component: {fileID: 2123672230640225590}
   - component: {fileID: 6952858023694654821}
+  - component: {fileID: 7489721753226951140}
   m_Layer: 0
   m_Name: Data File
-  m_TagString: Untagged
+  m_TagString: DataFile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +102,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e20447cd9e977d14db277ba0e584c1d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataType: 0
+  dataType: 6
+  immuneTime: 1
+  isImmune: 1
+  currentImmuneTimer: 0
+  crashDestroyDelay: 0
+  dropDataDestroyDelay: 1.5
+  falseSprite: {fileID: 2478943349938514664, guid: 75b8f6e8f1330fa43bc07bb476c651e3, type: 3}
+  violationSprite: {fileID: 3026120706474155957, guid: 75b8f6e8f1330fa43bc07bb476c651e3, type: 3}
+  educationSprite: {fileID: -7377170927877912761, guid: 75b8f6e8f1330fa43bc07bb476c651e3, type: 3}
+  entertainmentSprite: {fileID: 8355217360322311386, guid: 75b8f6e8f1330fa43bc07bb476c651e3, type: 3}
+  politicSprite: {fileID: -2868358445743897955, guid: 75b8f6e8f1330fa43bc07bb476c651e3, type: 3}
+  personalSprite: {fileID: 5189895594162850017, guid: 75b8f6e8f1330fa43bc07bb476c651e3, type: 3}
 --- !u!61 &6952858023694654821
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,3 +160,30 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &7489721753226951140
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6590740340018707397}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

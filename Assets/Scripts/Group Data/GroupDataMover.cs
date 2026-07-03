@@ -47,9 +47,7 @@ public class GroupDataMover : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
-        Debug.Log($"[{gameObject.name} - GroupDataMover] Moving group data...");
-        
+   
         transform.position =  Vector2.MoveTowards(transform.position, _endPosition.position, moveSpeed * Time.deltaTime);
     }
 
@@ -57,7 +55,6 @@ public class GroupDataMover : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, _endPosition.position) < 0.1f)
         {
-            Debug.Log($"[{gameObject.name} - GroupDataMover] Reached end position.");
             isInitialized = false;
             return true;
         }

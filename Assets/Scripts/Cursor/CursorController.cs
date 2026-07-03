@@ -37,6 +37,11 @@ public class CursorController : MonoBehaviour
 
     private void Update()
     {
+        if (isDragging && draggedObject2D == null)
+        {
+            isDragging = false;
+        }
+
         if (!isDragging)
             OnDetechObject();
 
@@ -58,13 +63,10 @@ public class CursorController : MonoBehaviour
         Vector2 mouseWorldPos2D = GetMouseWorldPosition2D();
         Collider2D hit2D = Physics2D.OverlapPoint(mouseWorldPos2D);
 
-        if(hit2D != hoveredObject2D)
-        {
-            hoveredObject2D = hit2D;
-            if (hoveredObject2D != null)
-                Debug.Log("Detected object: " + hoveredObject2D.gameObject.name);
-        }
+        if (hit2D != null && !hit2D.CompareTag("DataFile"))
+            hit2D = null; // ignore anything that isn't a DataFile
 
+        hoveredObject2D = hit2D;
     }
 
     private void OnStartDrag()
@@ -83,14 +85,10 @@ public class CursorController : MonoBehaviour
         Vector2 mouseWorldPos = GetMouseWorldPosition2D();
         dragOffset2D = (Vector2)draggedObject2D.transform.position - mouseWorldPos;
 
-        Debug.Log("Drag started: " + draggedObject2D.name);
     }
 
     private void OnEndDrag()
     {
-        if (draggedObject2D != null)
-            Debug.Log("Drag ended: " + draggedObject2D.name);
-
         isDragging = false;
         draggedObject2D = null;
     }
