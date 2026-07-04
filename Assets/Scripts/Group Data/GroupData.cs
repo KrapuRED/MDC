@@ -17,7 +17,7 @@ public class GroupData : MonoBehaviour
 
     public bool IsFilled => isFilled;
 
-    public void FillGroup(List<DataSpawnConfig> dataSpawnConfig, Transform endPoint)
+    public void FillGroup(List<DataSpawnConfig> dataSpawnConfig, Transform endPoint, DataFlowLineSpeed speedMode)
     {
         maxDataCount = dataSlots.Count;
         dataCount = Mathf.Clamp(dataCount, 1, dataSlots.Count);
@@ -33,7 +33,7 @@ public class GroupData : MonoBehaviour
         if (_spawnedData.Count >= maxDataCount)
         {
             Debug.Log("Data group is filled to max capacity.");
-            groupDataMover.InitializeMover(endPoint);
+            groupDataMover.InitializeMover(endPoint, speedMode);
         }
     }
 

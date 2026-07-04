@@ -1,8 +1,20 @@
 using UnityEngine;
+using System.Collections.Generic;
+
+[System.Serializable]
+public class SpeedModifier
+{
+    public string speedModifierName;
+    public DataFlowLineSpeed speedMode;
+    public float speedMultiplier;
+}
 
 public class GroupDataMover : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private List<SpeedModifier> speedModifiers = new List<SpeedModifier>();
+    [SerializeField] private float baseSpeed = 5f;
+    [SerializeField] private float currentSpeed;
+    private DataFlowLineSpeed currentSpeedMode;
 
     [SerializeField] private Transform _endPosition;
     [SerializeField] private bool isInitialized = false;
@@ -15,8 +27,11 @@ public class GroupDataMover : MonoBehaviour
         MoveGroupData();
     }
 
-    public void InitializeMover(Transform endPositions)
+
+    public void InitializeMover(Transform endPositions, DataFlowLineSpeed speedMode)
     {
+        //Debug.Log($"[{gameObject.name} - GroupDataMover] Initialize Mover with speedMode mode: {speedMode}.");
+
         if (isInitialized)
         {
             Debug.LogWarning($"[{gameObject.name} - GroupDataMover] Is Been Initialized!.");
@@ -29,9 +44,23 @@ public class GroupDataMover : MonoBehaviour
             return;
         }
 
-            _endPosition   = endPositions;
+        currentSpeedMode = speedMode;
+        _endPosition  = endPositions;
 
         isInitialized = true;
+    }
+
+    private float CalculateSpeedGroup(DataFlowLineSpeed speedMode)
+    {
+        foreach (var modifier in speedModifiers)
+        {
+            if (modifier.speedMode == speedMode)
+            {
+                return modifier.speedMultiplier;
+            }
+        }
+
+        return 1;
     }
 
     private void MoveGroupData()
@@ -47,8 +76,12 @@ public class GroupDataMover : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-   
-        transform.position =  Vector2.MoveTowards(transform.position, _endPosition.position, moveSpeed * Time.deltaTime);
+
+
+        float speedMultiplier = CalculateSpeedGroup(currentSpeedMode); // Replace with the actual speedMode mode you want to use
+        currentSpeed = baseSpeed * speedMultiplier;
+
+        transform.position =  Vector2.MoveTowards(transform.position, _endPosition.position, currentSpeed * Time.deltaTime);
     }
 
     private bool DistanceCheck()

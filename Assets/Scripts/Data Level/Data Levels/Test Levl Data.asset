@@ -15,7 +15,7 @@ MonoBehaviour:
   dataFlowLineDataList:
   - dataFlowLineName: TEST DATA FLOW 1
     dataFlowLineDirection: 1
-    dataFlowLineSpeed: 0
+    dataFlowLineSpeed: 1
     spawnIntervalMin: 1.5
     spawnIntervalMax: 5
     groupSpawnConfigList:
@@ -55,7 +55,7 @@ MonoBehaviour:
       change: 10
   - dataFlowLineName: TEST DATA FLOW 2
     dataFlowLineDirection: 2
-    dataFlowLineSpeed: 0
+    dataFlowLineSpeed: 2
     spawnIntervalMin: 1.5
     spawnIntervalMax: 5
     groupSpawnConfigList:
@@ -95,7 +95,47 @@ MonoBehaviour:
       change: 10
   - dataFlowLineName: TEST DATA FLOW 3
     dataFlowLineDirection: 1
-    dataFlowLineSpeed: 0
+    dataFlowLineSpeed: 3
+    spawnIntervalMin: 1.5
+    spawnIntervalMax: 5
+    groupSpawnConfigList:
+    - groupName: Group 1
+      groupPrefabs: {fileID: 2702702922196006720, guid: 4eff5d6bde7fd4547a3524db872fff3e, type: 3}
+      change: 30
+    - groupName: Group 2
+      groupPrefabs: {fileID: 3580099569036639630, guid: 1573db21401a9d54ca8e5a393f401b9f, type: 3}
+      change: 20
+    - groupName: Group 3
+      groupPrefabs: {fileID: 3580099569036639630, guid: 5a50cc1e715a9344888da1c8c4375724, type: 3}
+      change: 20
+    - groupName: Group 4
+      groupPrefabs: {fileID: 3580099569036639630, guid: a8871f5ada20f3a4da907decd0a2633e, type: 3}
+      change: 10
+    - groupName: Group 5
+      groupPrefabs: {fileID: 3580099569036639630, guid: 630e741a448898249bdb8b41c02af13a, type: 3}
+      change: 10
+    dataSpawnConfigList:
+    - dataName: False Information
+      dataType: 0
+      change: 30
+    - dataName: Violation
+      dataType: 1
+      change: 30
+    - dataName: Education
+      dataType: 2
+      change: 10
+    - dataName: Entertainment
+      dataType: 3
+      change: 10
+    - dataName: Politic
+      dataType: 4
+      change: 10
+    - dataName: Personal
+      dataType: 5
+      change: 10
+  - dataFlowLineName: TEST DATA FLOW 4
+    dataFlowLineDirection: 2
+    dataFlowLineSpeed: 4
     spawnIntervalMin: 1.5
     spawnIntervalMax: 5
     groupSpawnConfigList:

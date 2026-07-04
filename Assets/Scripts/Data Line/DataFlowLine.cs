@@ -6,7 +6,7 @@ public class DataFlowLine : MonoBehaviour
     [SerializeField] private Transform startPoint;
     [SerializeField] private Transform endPoint;
     [SerializeField] private DataFlowLineDirection direction;
-    [SerializeField] private DataFlowLineSpeed speed;
+    [SerializeField] private DataFlowLineSpeed speedMode;
 
     [Header("Reference Object")]
     [SerializeField] private DataFlowLineDataSpawner dataFlowLineDataSpawner;
@@ -15,12 +15,14 @@ public class DataFlowLine : MonoBehaviour
     [SerializeField] private Color right = Color.red;
     [SerializeField] private Color left = Color.yellow;
 
-    public DataFlowLineSpeed SpeedFlowLine => speed;
+    public DataFlowLineSpeed SpeedFlowLine => speedMode;
+    private DataFlowLineSpeed? _pendingSpeedMode;
+    private bool isInitialize;
 
     public void InitializeDataFlow(DataFlowLineData config)
     {
         direction = config.dataFlowLineDirection;
-        speed     = config.dataFlowLineSpeed;
+        speedMode     = config.dataFlowLineSpeed;
 
         //FLIP THE POSITION OF THE START AND END POINTS BASED ON THE DIRECTION
         if (direction == DataFlowLineDirection.Right)
@@ -29,11 +31,41 @@ public class DataFlowLine : MonoBehaviour
         }
 
         dataFlowLineDataSpawner.IntilizeDataSpawner(config);
+        isInitialize = true;
+
+        if (_pendingSpeedMode.HasValue)
+        {
+            Debug.Log($"{gameObject.name} applying pending speed mode {_pendingSpeedMode.Value} after init");
+            ChangeSpeedMode(_pendingSpeedMode.Value);
+            _pendingSpeedMode = null;
+        }
+    }
+
+    private void SwapPosition()
+    {
+        Vector2 prevStartPos = startPoint.position;
+        Vector2 prevEndPos   = endPoint.position;
+        
+        startPoint.position = prevEndPos;
+        endPoint.position = prevStartPos;
+    }
+
+    public void ChangeSpeedMode(DataFlowLineSpeed speedModeChange)
+    {
+        if (!isInitialize)
+        {
+            Debug.LogWarning($"{gameObject.name} not initialized yet — queuing speed mode {speedModeChange} to apply after init");
+            _pendingSpeedMode = speedModeChange;
+            return;
+        }
+
+        Debug.Log($"{gameObject.name} changing speed mode {speedMode} -> {speedModeChange}");
+        speedMode = speedModeChange;
     }
 
     private void OnDrawGizmos()
     {
-        
+
         if (direction == DataFlowLineDirection.Right)
         {
             Gizmos.color = right;
@@ -48,14 +80,5 @@ public class DataFlowLine : MonoBehaviour
         }
 
         Gizmos.DrawLine(startPoint.position, endPoint.position);
-    }
-
-    private void SwapPosition()
-    {
-        Vector2 prevStartPos = startPoint.position;
-        Vector2 prevEndPos   = endPoint.position;
-        
-        startPoint.position = prevEndPos;
-        endPoint.position = prevStartPos;
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections.Generic;
+using Random = UnityEngine.Random;
 
 [System.Serializable]
 public enum DataFlowLineDirection
@@ -13,6 +14,7 @@ public enum DataFlowLineDirection
 [System.Serializable]
 public enum DataFlowLineSpeed
 {
+    SuperSlow,
     Slow,
     Normal,
     LittleFast,
@@ -66,5 +68,13 @@ public class DataFlowLineManager : MonoBehaviour
         }
 
         dataFlowLine.InitializeDataFlow(config);
+    }
+
+    public void ApplySpeedModifier(DataFlowLineSpeed speedMode)
+    {
+        int randomIndex = Random.Range(0, dataFlowLinePoints.Count);
+
+        DataFlowLine selectLine = dataFlowLinePoints[randomIndex].GetComponent<DataFlowLine>();
+        selectLine.ChangeSpeedMode(speedMode);
     }
 }

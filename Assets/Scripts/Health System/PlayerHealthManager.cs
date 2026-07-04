@@ -27,9 +27,14 @@ public class PlayerHealthManager : MonoBehaviour
 
     private void Start()
     {
-        if (currentHealth >= 0)
+        if (currentHealth > 0)
             return;
 
+        OnInitializeHeart();
+    }
+
+    private void OnInitializeHeart()
+    {
         currentHealth = maxHealth;
 
         if (currentHealth <= maxHealth)
@@ -40,6 +45,12 @@ public class PlayerHealthManager : MonoBehaviour
 
     public void OnGetExtraHeart(int extraHealth)
     {
+        if (extraHealth <= 0)
+        {
+            OnInitializeHeart();
+            return;
+        }
+
         healthUIController.InitializeNormalHearts(maxHealth);
         healthUIController.InitializeExtraHearts(extraHealth);
 

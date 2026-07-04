@@ -17,26 +17,30 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
     private float _destroyTimer;
 
     [Header("Data File Sprites")]
+    [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Sprite falseSprite;
     [SerializeField] private Sprite violationSprite;
     [SerializeField] private Sprite educationSprite;
     [SerializeField] private Sprite entertainmentSprite;
     [SerializeField] private Sprite politicSprite;
     [SerializeField] private Sprite personalSprite;
+    private Vector2 originalColliderSize;
 
     Coroutine destroyCoroutine;
-    private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _boxCollider2D;
     private GroupData _ownerData;
-    private bool _isDragging;
+    private bool isDeatch;
 
     public DataType DataType => dataType;
 
-    private void OnEnable()
+    private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _ownerData = GetComponentInParent<GroupData>();
         _boxCollider2D = GetComponent<BoxCollider2D>();
+        _boxCollider2D.isTrigger = true;
+
+        originalColliderSize = _boxCollider2D.size;
     }
 
     private void Update()
@@ -47,7 +51,7 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
             return;
         }
 
-        if (_isDragging && isImmune)
+        if (isDeatch && isImmune)
         {
             currentImmuneTimer += Time.deltaTime;
         }
@@ -55,8 +59,6 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!_isDragging) return; // only crash while actively being dragged
-
         if (collision.TryGetComponent(out DataFile otherData))
         {
             if (!isImmune)
@@ -96,6 +98,8 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
         Debug.Log($"[{gameObject.name}] crashed into [{other.gameObject.name}]");
         PlayerHealthManager.Instance.OnTakingDamage();
 
+        //Play bliking animation
+
         other.destroyCoroutine = other.StartCoroutine(other.DestroyAfterDelay(other.crashDestroyDelay));
         destroyCoroutine = StartCoroutine(DestroyAfterDelay(crashDestroyDelay));
         // e.g. destroy both, play VFX, reset drag, penalize player, etc.
@@ -104,16 +108,22 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
     public void OnDrag()
     {
         //_boxCollider2D.isTrigger = false;
-        _isDragging = true;
+
+        isDeatch = true;
+
+        //Reduce the box collider by 30%
+        _boxCollider2D.size = originalColliderSize * 0.7f;
 
         transform.SetParent(null, worldPositionStays: true);
     }
 
     public void OnDrop()
     {
-        _isDragging = false;
-        // if put in recycler, destroy this object
-        //_boxCollider2D.isTrigger = true;
+        //change back the box collider
+        Debug.Log($"box collider in {gameObject.name} is {_boxCollider2D.enabled}");
+        _boxCollider2D.isTrigger = true;
+        _boxCollider2D.size = originalColliderSize;
+
     }
 
     public void DestroyDataFileByDropFile()

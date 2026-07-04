@@ -95,6 +95,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 307872a27ee856a458b0501187d6acec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  speedModifiers:
+  - speedModifierName: Super Slow
+    speedMode: 0
+    speedMultiplier: 0.5
+  - speedModifierName: Slow
+    speedMode: 1
+    speedMultiplier: 0.75
+  - speedModifierName: Normal
+    speedMode: 2
+    speedMultiplier: 1
+  - speedModifierName: Little Fast
+    speedMode: 3
+    speedMultiplier: 1.25
+  - speedModifierName: Fast
+    speedMode: 3
+    speedMultiplier: 1.5
+  baseSpeed: 5
+  currentSpeed: 0
   _endPosition: {fileID: 0}
   isInitialized: 0

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 
 public class DataFlowLineDataSpawner : MonoBehaviour
 {
+    [SerializeField] private DataFlowLine ownerDataFlowLine;
+
     [Header("Data Line Spawner Data Config")]
     [SerializeField] private Transform startPosition;
     [SerializeField] private Transform endPosition;
+    [SerializeField] private Transform spawnerContainer;
     [SerializeField] private float spawnIntervalMin;
     [SerializeField] private float spawnIntervalMax;
-    [SerializeField] private Transform spawnerContainer;
 
     [Header("Data Secure Spawner Config")]
     [SerializeField] private Transform lastSpawnGroup;
@@ -19,6 +21,11 @@ public class DataFlowLineDataSpawner : MonoBehaviour
     private List<DataSpawnConfig> _dataSpawnConfig = new();
     private float currentSpawnInterval;
     private bool isIntilize;
+
+    private void Start()
+    {
+        ownerDataFlowLine = GetComponentInParent<DataFlowLine>();
+    }
 
     private void Update()
     {
@@ -88,7 +95,7 @@ public class DataFlowLineDataSpawner : MonoBehaviour
         return null;
     }
 
-    public void GenerateData()
+    private void GenerateData()
     {
         if (!isSecureSpawn) 
         { 
@@ -107,6 +114,6 @@ public class DataFlowLineDataSpawner : MonoBehaviour
 
         lastSpawnGroup = groupInstance.transform;
 
-        groupData.FillGroup(_dataSpawnConfig, endPosition);
+        groupData.FillGroup(_dataSpawnConfig, endPosition, ownerDataFlowLine.SpeedFlowLine);
     }
 }

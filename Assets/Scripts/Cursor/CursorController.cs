@@ -1,11 +1,12 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class CursorController : MonoBehaviour
 {
     [SerializeField] private bool isDragging = false;
-    private Collider2D hoveredObject2D;
-    private Collider2D draggedObject2D;
+    [SerializeField] private Collider2D hoveredObject2D;
+    [SerializeField] private Collider2D draggedObject2D;
     private Vector2 dragOffset2D;
 
     private GamePlayInput _gamePlayInput;
@@ -35,7 +36,7 @@ public class CursorController : MonoBehaviour
         _gamePlayInput.Mouse.Drag.canceled += _ => OnEndDrag();
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (isDragging && draggedObject2D == null)
         {
@@ -47,7 +48,7 @@ public class CursorController : MonoBehaviour
 
         if (isDragging && draggedObject2D != null)
         {
-            Vector2 mouseWorldPos = mainCam.ScreenToWorldPoint(_gamePlayInput.Mouse.Position.ReadValue<Vector2>());
+            Vector2 mouseWorldPos = GetMouseWorldPosition2D();
             draggedObject2D.transform.position = mouseWorldPos + dragOffset2D;
         }
     }
@@ -63,10 +64,23 @@ public class CursorController : MonoBehaviour
         Vector2 mouseWorldPos2D = GetMouseWorldPosition2D();
         Collider2D hit2D = Physics2D.OverlapPoint(mouseWorldPos2D);
 
-        if (hit2D != null && !hit2D.CompareTag("DataFile"))
-            hit2D = null; // ignore anything that isn't a DataFile
+        if (hit2D != null && hit2D.CompareTag("DataFile"))
+        {
+            Debug.Log($"{hit2D.name}");
 
-        hoveredObject2D = hit2D;
+            if (hit2D.TryGetComponent(out DataFile dataFile))
+            {
+                hoveredObject2D = hit2D;
+            }
+            else
+            {
+                hoveredObject2D = null; // Bukan DataFile, abaikan
+            }
+        }
+        else
+        {
+            hoveredObject2D = null;
+        }
     }
 
     private void OnStartDrag()
@@ -89,6 +103,11 @@ public class CursorController : MonoBehaviour
 
     private void OnEndDrag()
     {
+        if (draggedObject2D != null && draggedObject2D.TryGetComponent(out IDragable dragable))
+        {
+            dragable.OnDrop();
+        }
+
         isDragging = false;
         draggedObject2D = null;
     }

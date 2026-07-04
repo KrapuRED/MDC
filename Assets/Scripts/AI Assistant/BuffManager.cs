@@ -5,7 +5,6 @@ using System.Collections.Generic;
 public class BuffTable
 {
     public string buffName;
-    public string buffDescription;
     public int change;
     public BuffSO BuffData;
 }
@@ -13,6 +12,9 @@ public class BuffTable
     public class BuffManager : MonoBehaviour
 {
     public static BuffManager Instance { get; private set; }
+
+    [Header("Reference Data Spawner")]
+    [SerializeField] private List<DataFlowLineDataSpawner> dataFlowLineDataSpawners = new();
 
     [SerializeField] private List<BuffTable> buffList = new();
     [SerializeField] private BuffSO selectedBuff;

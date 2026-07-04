@@ -108,12 +108,13 @@ MonoBehaviour:
   currentImmuneTimer: 0
   crashDestroyDelay: 0
   dropDataDestroyDelay: 1.5
-  falseSprite: {fileID: 2478943349938514664, guid: 75b8f6e8f1330fa43bc07bb476c651e3, type: 3}
-  violationSprite: {fileID: 3026120706474155957, guid: 75b8f6e8f1330fa43bc07bb476c651e3, type: 3}
-  educationSprite: {fileID: -7377170927877912761, guid: 75b8f6e8f1330fa43bc07bb476c651e3, type: 3}
-  entertainmentSprite: {fileID: 8355217360322311386, guid: 75b8f6e8f1330fa43bc07bb476c651e3, type: 3}
-  politicSprite: {fileID: -2868358445743897955, guid: 75b8f6e8f1330fa43bc07bb476c651e3, type: 3}
-  personalSprite: {fileID: 5189895594162850017, guid: 75b8f6e8f1330fa43bc07bb476c651e3, type: 3}
+  _spriteRenderer: {fileID: 4927864263199339470}
+  falseSprite: {fileID: 182991386114293469, guid: 80cac8d759ef25f45b74231476608d64, type: 3}
+  violationSprite: {fileID: -1770953025978185799, guid: 80cac8d759ef25f45b74231476608d64, type: 3}
+  educationSprite: {fileID: 7237707273058968535, guid: 80cac8d759ef25f45b74231476608d64, type: 3}
+  entertainmentSprite: {fileID: -226370112080214077, guid: 80cac8d759ef25f45b74231476608d64, type: 3}
+  politicSprite: {fileID: -6353987807351945803, guid: 80cac8d759ef25f45b74231476608d64, type: 3}
+  personalSprite: {fileID: -5795024578967427399, guid: fa5eda3abb2b22e48b46a323b0de6086, type: 3}
 --- !u!61 &6952858023694654821
 BoxCollider2D:
   m_ObjectHideFlags: 0
