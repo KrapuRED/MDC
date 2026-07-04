@@ -5,7 +5,11 @@ using System.Collections.Generic;
 public enum CharacterType
 {
     Player,
-    NPC
+    Alice,
+    jackson,
+    AIAssitance,
+    AISupervisor,
+    AIBoss
 }
 
 [System.Serializable]

@@ -125,9 +125,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4871686970290976860}
-  - component: {fileID: 104769767943911953}
+  - component: {fileID: -577704391695277788}
   m_Layer: 0
-  m_Name: CursorFollowTarget
+  m_Name: CursorFollowTargetX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ Transform:
   - {fileID: 8910465707846616972}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &104769767943911953
+--- !u!114 &-577704391695277788
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,10 +158,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6810784012080655925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0622288faa19b1c45acb6c5220c6e3fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ac502c35d07d4f4fba9e2e15ab55b2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  edgeSize: 0.16
-  maxOffset: 20
-  smoothTime: 0.55
+  edgeSize: 0.18
+  maxOffset: 5
+  smoothTime: 0.08
