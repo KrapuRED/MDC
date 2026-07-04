@@ -1,34 +1,10 @@
 fileFormatVersion: 2
-guid: 7b07945d8acc94044b7c398d9fd28b08
+guid: 046555320b60dba4aa611c3cdf1cae85
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4126398844827890785
-    second: UI_GameOver_LiabilityTerminated_0
-  - first:
-      213: 9171492517339568976
-    second: UI_GameOver_LiabilityTerminated_1
-  - first:
-      213: 1327536511073452478
-    second: UI_GameOver_LiabilityTerminated_2
-  - first:
-      213: 1493058526730741626
-    second: UI_GameOver_LiabilityTerminated_3
-  - first:
-      213: 250260532438044323
-    second: UI_GameOver_LiabilityTerminated_4
-  - first:
-      213: 9207304280505813709
-    second: UI_GameOver_LiabilityTerminated_5
-  - first:
-      213: 7733947199955947229
-    second: UI_GameOver_LiabilityTerminated_6
-  - first:
-      213: 6142532123286166983
-    second: UI_GameOver_LiabilityTerminated_7
-  - first:
-      213: 1804003436767848788
-    second: UI_GameOver_LiabilityTerminated_8
+      213: -3000273745692286187
+    second: DeskScene_Monitor_OnScreen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -137,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_GameOver_LiabilityTerminated_0
+      name: DeskScene_Monitor_OnScreen_0
       rect:
         serializedVersion: 2
-        x: 214
-        y: 385
-        width: 1498
-        height: 634
+        x: 239
+        y: 278
+        width: 740
+        height: 434
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f9b837cfc161cb6c0800000000000000
-      internalID: -4126398844827890785
+      spriteID: 513a417ace2ec56d0800000000000000
+      internalID: -3000273745692286187
       vertices: []
       indices: 
       edges: []
@@ -162,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9e7753d6b7a56ef4996f6486ff68d4d7
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -172,15 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UI_GameOver_LiabilityTerminated_0: -4126398844827890785
-      UI_GameOver_LiabilityTerminated_1: 9171492517339568976
-      UI_GameOver_LiabilityTerminated_2: 1327536511073452478
-      UI_GameOver_LiabilityTerminated_3: 1493058526730741626
-      UI_GameOver_LiabilityTerminated_4: 250260532438044323
-      UI_GameOver_LiabilityTerminated_5: 9207304280505813709
-      UI_GameOver_LiabilityTerminated_6: 7733947199955947229
-      UI_GameOver_LiabilityTerminated_7: 6142532123286166983
-      UI_GameOver_LiabilityTerminated_8: 1804003436767848788
+      DeskScene_Monitor_OnScreen_0: -3000273745692286187
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
