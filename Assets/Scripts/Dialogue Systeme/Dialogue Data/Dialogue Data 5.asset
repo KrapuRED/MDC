@@ -13,4 +13,88 @@ MonoBehaviour:
   m_Name: Dialogue Data 5
   m_EditorClassIdentifier: 
   dialogueName: 
-  dialogueList: []
+  dialogueList:
+  - nameCharacter: AI Supervisor
+    charType: 4
+    dialogueText: 'Welcome back, Employee ID 7421. '
+  - nameCharacter: AI Supervisor
+    charType: 4
+    dialogueText: Employment status restored.
+  - nameCharacter: AI Supervisor
+    charType: 4
+    dialogueText: I am the Central Management AI assigned as your supervisor.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: ...Where's Alice?
+  - nameCharacter: AI Supervisor
+    charType: 4
+    dialogueText: '{Who is Alice?}(RED)'
+  - nameCharacter: You
+    charType: 0
+    dialogueText: My supervisor. She worked here before I was laid off.
+  - nameCharacter: AI Supervisor
+    charType: 4
+    dialogueText: No employee matching that designation exists within the active
+      management database.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: That can't be right...
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Boss Jackson? Please answer...
+  - nameCharacter: Jackson
+    charType: 2
+    dialogueText: Jackson speaking.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Boss! You're still here. Where's Alice?
+  - nameCharacter: Jackson
+    charType: 2
+    dialogueText: Alice left years ago. All supervision is handled by AI now.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: She just... disappeared?
+  - nameCharacter: Jackson
+    charType: 2
+    dialogueText: That's company policy. I have to go.
+  - nameCharacter: AI Supervisor
+    charType: 4
+    dialogueText: Communication transferred.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Wait... you can do that?
+  - nameCharacter: AI Supervisor
+    charType: 4
+    dialogueText: Your concern has been acknowledged.
+  - nameCharacter: AI Supervisor
+    charType: 4
+    dialogueText: However, your scheduled work period has already begun.
+  - nameCharacter: AI Supervisor
+    charType: 4
+    dialogueText: Negative. {False Information Interception is no longer assigned
+      to you.}(RED)
+  - nameCharacter: AI Supervisor
+    charType: 0
+    dialogueText: That responsibility has been transferred to another department.
+  - nameCharacter: AI Supervisor
+    charType: 0
+    dialogueText: You are not required to concern yourself with it.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Then what's my job?
+  - nameCharacter: AI Supervisor
+    charType: 4
+    dialogueText: 'Your new responsibilities are {Intercept Violation, Intercept
+      Academic, Intercept Entertainment, and Intercept Politics.}(RED)
+
+'
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Why?
+  - nameCharacter: AI Supervisor
+    charType: 4
+    dialogueText: You are not required to know.
+  - nameCharacter: AI Supervisor
+    charType: 4
+    dialogueText: Please proceed to your workstation. Further details will be provided
+      when your task begins.

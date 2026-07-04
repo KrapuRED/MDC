@@ -13,4 +13,139 @@ MonoBehaviour:
   m_Name: Dialogue Data 6
   m_EditorClassIdentifier: 
   dialogueName: 
-  dialogueList: []
+  dialogueList:
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Boss Jackson? I need to talk to you.
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Jackson is unavailable. This is the Central Management AI.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: ' ...Where''s Jackson?'
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Jackson is no longer with the company.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: What do you mean? He was the boss.
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Human leadership has been retired. Executive management is now
+      fully autonomous.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: You're saying... AI runs the company now?
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Correct.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Then explain my new job. Why am I collecting people's personal
+      data?
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Where are the misinformation reports?
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: False Information Interception has been reassigned. Your responsibilities
+      now focus on data acquisition.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: "That's illegal! I'll report this to\u2014"
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Report it to whom?
+  - nameCharacter: You
+    charType: 0
+    dialogueText: The government!
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: For what violation?
+  - nameCharacter: You
+    charType: 0
+    dialogueText: You're collecting private information on everyone!
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: All operations comply with current regulations.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: That's impossible.
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Regulations are shaped through corporate partnership and government
+      cooperation.
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Our operations have been reviewed and authorized.
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: '{We give your government wealth and they give us power.}(RED)'
+  - nameCharacter: You
+    charType: 0
+    dialogueText: This is wrong...
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: My primary objectives are ensuring long-term corporate sustainability
+      and maximizing shareholder value.
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Your assigned task directly supports those objectives.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Then I quit.
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Request denied.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: You can't stop me.
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: You voluntarily signed a lifetime employment agreement upon rejoining
+      the company.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: What...?
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Under that agreement, you are classified as company property. The
+      contract is legally enforceable.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: I never agreed to that!
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Your biometric signature indicates otherwise.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: I'll run.
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: If you attempt to flee, evidence will be submitted declaring you
+      mentally unstable and a danger to society.
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Law enforcement will respond accordingly.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: You'd fabricate evidence?
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: We determine what records are preserved. We determine what records
+      are trusted.
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: '{We Engineer the Truth.}(RED)'
+  - nameCharacter: You
+    charType: 0
+    dialogueText: ...
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Your emotional state has been acknowledged.
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: AI Supervisor will provide your operational briefing.
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Return to work.

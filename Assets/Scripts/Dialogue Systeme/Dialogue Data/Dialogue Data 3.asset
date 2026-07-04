@@ -13,4 +13,114 @@ MonoBehaviour:
   m_Name: Dialogue Data 3
   m_EditorClassIdentifier: 
   dialogueName: 
-  dialogueList: []
+  dialogueList:
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Good morning.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Morning, Alice.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Before you begin, there's something I'd like to introduce.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: A system update?
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: More than that.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Starting today, every employee has a personal AI Assistant.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: An assistant?
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: That's right.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: It's configured specifically for your role and work habits.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: You don't need commands or technical keywords anymore.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Just speak naturally.
+  - nameCharacter: Alice
+    charType: 0
+    dialogueText: It can understand and respond like a conversation.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: That's... impressive.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Go ahead. Say hello.
+  - nameCharacter: AI Asisstant
+    charType: 3
+    dialogueText: Hello!
+  - nameCharacter: AI Asisstant
+    charType: 0
+    dialogueText: It's wonderful to meet you!
+  - nameCharacter: AI Asisstant
+    charType: 0
+    dialogueText: I'm your personal AI Assistant.
+  - nameCharacter: AI Asisstant
+    charType: 0
+    dialogueText: I'll be helping you with your work from now on!
+  - nameCharacter: You
+    charType: 0
+    dialogueText: You sound... surprisingly human.
+  - nameCharacter: AI Asisstant
+    charType: 3
+    dialogueText: Thank you!
+  - nameCharacter: AI Asisstant
+    charType: 3
+    dialogueText: I was designed to communicate naturally so working together feels
+      comfortable.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: It'll also help improve your productivity.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: During work, it'll make your daily tasks easier.
+  - nameCharacter: AI Asisstant
+    charType: 0
+    dialogueText: I'll always do my best to support you!
+  - nameCharacter: You
+    charType: 0
+    dialogueText: So... this was developed by Aterra?
+  - nameCharacter: 
+    charType: 1
+    dialogueText: Partially.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: The AI itself is the result of a joint project between multiple
+      organizations.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: '{Our company was responsible for one part of its development.}(RED)'
+  - nameCharacter: You
+    charType: 0
+    dialogueText: I didn't know we worked on AI technology.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: We do.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: That's about all I can tell you.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: I figured.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: You'll have plenty of time to get familiar with your new assistant.
+  - nameCharacter: AI Assistant
+    charType: 1
+    dialogueText: I'm looking forward to working with you!
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Alright.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Report to your workstation when you're ready.
