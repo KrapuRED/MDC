@@ -108,7 +108,6 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
     public void OnDrag()
     {
         //_boxCollider2D.isTrigger = false;
-
         isDeatch = true;
 
         //Reduce the box collider by 30%
@@ -117,12 +116,14 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
         transform.SetParent(null, worldPositionStays: true);
     }
 
-    public void OnDrop()
+    public void OnDrop(Vector2 dropPosition)
     {
-        //change back the box collider
-        Debug.Log($"box collider in {gameObject.name} is {_boxCollider2D.enabled}");
-        _boxCollider2D.isTrigger = true;
-        _boxCollider2D.size = originalColliderSize;
+        transform.position = dropPosition;
+        transform.SetParent(null, worldPositionStays: true);
+
+        // 3. Aktifkan kembali visual dan collider objek asli
+        _spriteRenderer.enabled = true;
+        _boxCollider2D.enabled = true;
 
     }
 

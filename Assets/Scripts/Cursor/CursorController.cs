@@ -4,10 +4,14 @@ using UnityEngine.InputSystem;
 
 public class CursorController : MonoBehaviour
 {
+    
     [SerializeField] private bool isDragging = false;
-    [SerializeField] private Collider2D hoveredObject2D;
-    [SerializeField] private Collider2D draggedObject2D;
+    [SerializeField] private DataFile hoveredObject2D;
+    [SerializeField] private DataFile draggedObject2D;
     private Vector2 dragOffset2D;
+
+    [Header("Detection Config")]
+    [SerializeField] private float grabRadius = 0.6f;
 
     private GamePlayInput _gamePlayInput;
     private Camera mainCam;
@@ -61,51 +65,54 @@ public class CursorController : MonoBehaviour
 
     private void OnDetechObject()
     {
-        Vector2 mouseWorldPos2D = GetMouseWorldPosition2D();
-        Collider2D hit2D = Physics2D.OverlapPoint(mouseWorldPos2D);
+        Vector2 mouseWorldPos = GetMouseWorldPosition2D();
+        Collider2D[] hits = Physics2D.OverlapCircleAll(mouseWorldPos, grabRadius);
 
-        if (hit2D != null && hit2D.CompareTag("DataFile"))
+        DataFile closestData = null;
+        float closestDistance = grabRadius; // Batas jarak maksimum deteksi
+
+        // 2. Cari objek dengan komponen DataFile yang posisinya paling dekat dengan kursor
+        foreach (Collider2D hit in hits)
         {
-            Debug.Log($"{hit2D.name}");
+            if (hit.TryGetComponent(out DataFile dataFile))
+            {
+                float distance = Vector2.Distance(mouseWorldPos, hit.transform.position);
 
-            if (hit2D.TryGetComponent(out DataFile dataFile))
-            {
-                hoveredObject2D = hit2D;
-            }
-            else
-            {
-                hoveredObject2D = null; // Bukan DataFile, abaikan
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    closestData = dataFile;
+                }
             }
         }
-        else
+
+        // 3. Masukkan hasil objek terdekat ke hoveredObject2D
+        hoveredObject2D = closestData;
+
+        if (hoveredObject2D != null)
         {
-            hoveredObject2D = null;
+            Debug.Log($"Hovering: {hoveredObject2D.name}");
         }
     }
 
     private void OnStartDrag()
     {
-        if(hoveredObject2D == null) return;
+        if (hoveredObject2D == null) return;
 
-        draggedObject2D = hoveredObject2D;
-
-        if (draggedObject2D.TryGetComponent(out IDragable dragable))
+        if (hoveredObject2D.TryGetComponent(out DataFile dataFile))
         {
-            dragable.OnDrag();
+            draggedObject2D = dataFile;
+            draggedObject2D.OnDrag();
+            isDragging = true;
         }
-
-        isDragging = true;
-
-        Vector2 mouseWorldPos = GetMouseWorldPosition2D();
-        dragOffset2D = (Vector2)draggedObject2D.transform.position - mouseWorldPos;
-
     }
 
     private void OnEndDrag()
     {
-        if (draggedObject2D != null && draggedObject2D.TryGetComponent(out IDragable dragable))
+        if (draggedObject2D != null)
         {
-            dragable.OnDrop();
+            Vector2 finalDropPos = GetMouseWorldPosition2D();
+            draggedObject2D.OnDrop(finalDropPos);
         }
 
         isDragging = false;

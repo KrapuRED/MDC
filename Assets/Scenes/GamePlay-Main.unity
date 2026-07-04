@@ -787,11 +787,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BoundingShape2D: {fileID: 1180128215}
   Damping: 0.5
-  SlowingDistance: 20
+  SlowingDistance: 5
   OversizeWindow:
     Enabled: 1
     MaxWindowSize: 0
-    Padding: 0
+    Padding: 10
   m_LegacyMaxWindowSize: -2
 --- !u!1 &214745305
 GameObject:
@@ -1826,7 +1826,7 @@ Transform:
   m_GameObject: {fileID: 709097210}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00092805957, y: -0.000000006543914, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2740,6 +2740,7 @@ MonoBehaviour:
   isDragging: 0
   hoveredObject2D: {fileID: 0}
   draggedObject2D: {fileID: 0}
+  grabRadius: 0.6
 --- !u!4 &1373845708
 Transform:
   m_ObjectHideFlags: 0
