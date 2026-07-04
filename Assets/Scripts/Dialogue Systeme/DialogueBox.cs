@@ -9,6 +9,14 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private KeywordHighlightSO keywordHighlights;
 
+    [SerializeField] private Sprite AliceFace;
+    [SerializeField] private Sprite JacksonFace;
+    [SerializeField] private Sprite AIAssitance;
+    [SerializeField] private Sprite AISupervisor;
+    [SerializeField] private Sprite AIBoss;
+
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
     public void ShowDialogueBox()
     {
         if (canvasGroup == null)
@@ -31,6 +39,19 @@ public class DialogueBox : MonoBehaviour
 
     public void UpdateDialogueBox(DialogueLine dialogueData)
     {
+        if (dialogueData.charType != CharacterType.Player && spriteRenderer != null)
+        {
+            spriteRenderer.sprite = dialogueData.charType switch
+            {
+                CharacterType.Alice => AliceFace,
+                CharacterType.jackson => JacksonFace,
+                CharacterType.AIAssitance => AIAssitance,
+                CharacterType.AISupervisor => AISupervisor,
+                CharacterType.AIBoss => AIBoss,
+                _ => spriteRenderer.sprite // unknown type - leave whatever was already showing
+            };
+        }
+        
         characterName.text = dialogueData.nameCharacter;
 
         // Cukup panggil teksnya saja tanpa mengoper keywordHighlights
