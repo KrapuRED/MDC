@@ -1,10 +1,43 @@
 fileFormatVersion: 2
-guid: 6e26b6032c7a4f14db3e2570bd49e733
+guid: 79bfa508c63f36040af81eaeb4af1fbd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2980098991803815094
-    second: DeskScene_UI_CompanyhierarchyPanel_0
+      213: -1704020857769049230
+    second: Name_SupervisorAlice_0
+  - first:
+      213: -6493890561713146386
+    second: Name_SupervisorAlice_1
+  - first:
+      213: 7345804571035191756
+    second: Name_SupervisorAlice_2
+  - first:
+      213: -4709378833176595549
+    second: Name_SupervisorAlice_3
+  - first:
+      213: -8226360214077741726
+    second: Name_SupervisorAlice_4
+  - first:
+      213: 3414024964655774404
+    second: Name_SupervisorAlice_5
+  - first:
+      213: 2441189070553102229
+    second: Name_SupervisorAlice_6
+  - first:
+      213: 3222177772993875337
+    second: Name_SupervisorAlice_7
+  - first:
+      213: 495829678365552501
+    second: Name_SupervisorAlice_8
+  - first:
+      213: 8000920780346831939
+    second: Name_SupervisorAlice_9
+  - first:
+      213: 3267006261449870351
+    second: Name_SupervisorAlice_10
+  - first:
+      213: 6052642019724477964
+    second: Name_SupervisorAlice_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +108,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +146,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DeskScene_UI_CompanyhierarchyPanel_0
+      name: Name_SupervisorAlice_0
       rect:
         serializedVersion: 2
-        x: 1445
+        x: 0
         y: 0
-        width: 475
-        height: 1080
+        width: 249
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b457f96e307b5920800000000000000
-      internalID: 2980098991803815094
+      spriteID: 273c1d2ee0a1a58e0800000000000000
+      internalID: -1704020857769049230
       vertices: []
       indices: 
       edges: []
@@ -138,7 +171,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 29eb06de1cf3b5d4ab13566bc5624fce
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +181,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DeskScene_UI_CompanyhierarchyPanel_0: 2980098991803815094
+      Name_SupervisorAlice_0: -1704020857769049230
+      Name_SupervisorAlice_1: -6493890561713146386
+      Name_SupervisorAlice_10: 3267006261449870351
+      Name_SupervisorAlice_11: 6052642019724477964
+      Name_SupervisorAlice_2: 7345804571035191756
+      Name_SupervisorAlice_3: -4709378833176595549
+      Name_SupervisorAlice_4: -8226360214077741726
+      Name_SupervisorAlice_5: 3414024964655774404
+      Name_SupervisorAlice_6: 2441189070553102229
+      Name_SupervisorAlice_7: 3222177772993875337
+      Name_SupervisorAlice_8: 495829678365552501
+      Name_SupervisorAlice_9: 8000920780346831939
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

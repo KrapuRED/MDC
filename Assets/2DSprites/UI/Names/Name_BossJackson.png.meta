@@ -1,10 +1,40 @@
 fileFormatVersion: 2
-guid: 6e26b6032c7a4f14db3e2570bd49e733
+guid: d5213550d4254be40bc06cc2ac2857d0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2980098991803815094
-    second: DeskScene_UI_CompanyhierarchyPanel_0
+      213: 1530029971215808516
+    second: Name_BossJackson_0
+  - first:
+      213: -5045405298266369089
+    second: Name_BossJackson_1
+  - first:
+      213: 5259844707557624510
+    second: Name_BossJackson_2
+  - first:
+      213: -7904444638801007980
+    second: Name_BossJackson_3
+  - first:
+      213: -6822418845040495330
+    second: Name_BossJackson_4
+  - first:
+      213: 152086699253045914
+    second: Name_BossJackson_5
+  - first:
+      213: -4356560941647617310
+    second: Name_BossJackson_6
+  - first:
+      213: 7665105190594030312
+    second: Name_BossJackson_7
+  - first:
+      213: -9052003599009798869
+    second: Name_BossJackson_8
+  - first:
+      213: -3724408932159103448
+    second: Name_BossJackson_9
+  - first:
+      213: 3420246920319032535
+    second: Name_BossJackson_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +67,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +105,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +143,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DeskScene_UI_CompanyhierarchyPanel_0
+      name: Name_BossJackson_0
       rect:
         serializedVersion: 2
-        x: 1445
+        x: 0
         y: 0
-        width: 475
-        height: 1080
+        width: 249
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b457f96e307b5920800000000000000
-      internalID: 2980098991803815094
+      spriteID: 408f4020722cb3510800000000000000
+      internalID: 1530029971215808516
       vertices: []
       indices: 
       edges: []
@@ -138,7 +168,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4760d40d3e3394b429b131560f5f7ccb
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +178,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DeskScene_UI_CompanyhierarchyPanel_0: 2980098991803815094
+      Name_BossJackson_0: 1530029971215808516
+      Name_BossJackson_1: -5045405298266369089
+      Name_BossJackson_10: 3420246920319032535
+      Name_BossJackson_2: 5259844707557624510
+      Name_BossJackson_3: -7904444638801007980
+      Name_BossJackson_4: -6822418845040495330
+      Name_BossJackson_5: 152086699253045914
+      Name_BossJackson_6: -4356560941647617310
+      Name_BossJackson_7: 7665105190594030312
+      Name_BossJackson_8: -9052003599009798869
+      Name_BossJackson_9: -3724408932159103448
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
