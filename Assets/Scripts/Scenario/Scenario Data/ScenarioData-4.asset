@@ -12,24 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc734659cc18bf4cb15e019cad8bc2b, type: 3}
   m_Name: ScenarioData-4
   m_EditorClassIdentifier: 
-  ScenarioText: 'A New Coworker
+  ScenarioText: '
 
-    Four years have passed.
-
-    Artificial intelligence
-    has become part of everyday life. People no longer use AI only as software, they
-    talk to it, ask it questions, and rely on it to help with daily tasks.
-
-
-    The
-    technology feels more natural than ever.
+    Your manager informs you that you have been laid off, not
+    because of poor performance, but because the company has replaced all operational
+    workers with AI Employees. Only managerial roles remain human. This isn''t unique
+    to your company; nearly every industry has adopted the same AI workforce because
+    it is inexpensive, efficient, and easy to integrate.
 
 
-    This morning, Alice contacted
-    you before your shift.
+    You realize the AI
+    Assistant that had been helping you for years was also learning from you. By
+    collecting data from millions of workers, it mastered their jobs and eventually
+    made them unnecessary. With AI now handling most office work, finding another
+    job feels almost impossible.
 
-    She said the company had deployed a new system to
-    every employee.
 
-    You''re about to see what everyone has been talking about.'
+    As you leave the office, you realize this
+    is more than losing your career, it is a major shift in society. All you can
+    do now is hope your savings will last until you find a new way to earn a living.
+
+'
   CompanyHeirarchySprites: []

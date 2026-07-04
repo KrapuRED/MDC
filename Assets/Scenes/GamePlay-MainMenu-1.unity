@@ -3343,9 +3343,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2557564866063273671, guid: a424d72c7d762ee489eae9671a610670, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2557564866063273671, guid: a424d72c7d762ee489eae9671a610670, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2557564866063273671, guid: a424d72c7d762ee489eae9671a610670, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2557564866063273671, guid: a424d72c7d762ee489eae9671a610670, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4438487169663585053, guid: a424d72c7d762ee489eae9671a610670, type: 3}
       propertyPath: m_Name
       value: HUD - Level
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603969646002869575, guid: a424d72c7d762ee489eae9671a610670, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603969646002869575, guid: a424d72c7d762ee489eae9671a610670, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603969646002869575, guid: a424d72c7d762ee489eae9671a610670, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603969646002869575, guid: a424d72c7d762ee489eae9671a610670, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

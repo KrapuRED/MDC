@@ -12,24 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc734659cc18bf4cb15e019cad8bc2b, type: 3}
   m_Name: ScenarioData-3
   m_EditorClassIdentifier: 
-  ScenarioText: 'A New Coworker
+  ScenarioText: '
 
     Four years have passed.
 
-    Artificial intelligence
-    has become part of everyday life. People no longer use AI only as software, they
-    talk to it, ask it questions, and rely on it to help with daily tasks.
+    Artificial intelligence has become
+    part of everyday life. People no longer use AI only as software, they talk to
+    it, ask it questions, and rely on it to help with daily tasks.
 
 
-    The
-    technology feels more natural than ever.
+    The technology
+    feels more natural than ever.
 
 
-    This morning, Alice contacted
-    you before your shift.
+    This morning, Alice contacted you before
+    your shift.
 
-    She said the company had deployed a new system to
-    every employee.
+    She said the company had deployed a new system to every employee.
 
-    You''re about to see what everyone has been talking about.'
+    You''re
+    about to see what everyone has been talking about.'
   CompanyHeirarchySprites: []

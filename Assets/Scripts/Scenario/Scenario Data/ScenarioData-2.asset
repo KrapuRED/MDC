@@ -12,30 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc734659cc18bf4cb15e019cad8bc2b, type: 3}
   m_Name: ScenarioData-2
   m_EditorClassIdentifier: 
-  ScenarioText: 'End of Training
+  ScenarioText: '
 
-    Several months have passed since you joined
-    Aterra Media & Data Control.
+    Several months have passed since you joined Aterra Media &
+    Data Control.
 
-    What once felt unfamiliar has become part of
-    your daily routine. Intercepting harmful data now comes naturally, and you''ve
-    grown comfortable with your workstation.
-
-
-    Today marks the end of your training
-    period.
-
-    Even after months of working here, Aterra remains a mystery. Every
-    department operates independently, employees only know their own responsibilities,
-    and no one seems to talk about what happens beyond their division.
+    What once felt unfamiliar has become part of your daily routine.
+    Intercepting harmful data now comes naturally, and you''ve grown comfortable
+    with your workstation.
 
 
-    This
-    morning, Supervisor Alice told you that Boss Jackson wanted to speak with you
-    before your shift.
+    Today marks the end of your training period.
 
-    She didn''t say why.
+    Even
+    after months of working here, Aterra remains a mystery. Every department operates
+    independently, employees only know their own responsibilities, and no one seems
+    to talk about what happens beyond their division.
 
-    You''re a little nervous...
-    but also curious.'
+
+    This morning, Supervisor
+    Alice told you that Boss Jackson wanted to speak with you before your shift.
+
+    She
+    didn''t say why.
+
+    You''re a little nervous... but also curious.'
   CompanyHeirarchySprites: []

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc734659cc18bf4cb15e019cad8bc2b, type: 3}
   m_Name: ScenarioData-5
   m_EditorClassIdentifier: 
-  ScenarioText: 'The Offer
+  ScenarioText: '
 
     Years pass, and society remains in chaos. Mass unemployment
     has become the new normal, while governments struggle to control growing public

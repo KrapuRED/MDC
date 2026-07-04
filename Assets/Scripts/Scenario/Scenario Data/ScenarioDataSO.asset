@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc734659cc18bf4cb15e019cad8bc2b, type: 3}
   m_Name: ScenarioDataSO
   m_EditorClassIdentifier: 
-  ScenarioText: "A New Beginning\nCongratulations! You have graduated from Cybnus
-    University with a degree in Computer Science. Like many new graduates, finding
-    a job hasn't been easy. After weeks of searching, you finally receive an offer
-    from Aterra Media & Data Control. \n\nBefore accepting, you do some research.
-    Surprisingly, very little information about the company is available. It's a
-    private organization, yet its name appears repeatedly in government technology
-    projects. Despite its frequent involvement, there are almost no public details
-    explaining what the company actually contributes. From what you can gather, Aterra
-    specializes in network infrastructure and internet data management.\L\n\"Maybe
-    they help keep the internet safe... and ethical.\"\L\nWith no better opportunities
-    and eager to start your career, you accept the offer.\nToday is your first day."
+  ScenarioText: "\nCongratulations! You have graduated from Cybnus University with
+    a degree in Computer Science. Like many new graduates, finding a job hasn't been
+    easy. After weeks of searching, you finally receive an offer from Aterra Media
+    & Data Control. \n\nBefore accepting, you do some research. Surprisingly, very
+    little information about the company is available. It's a private organization,
+    yet its name appears repeatedly in government technology projects. Despite its
+    frequent involvement, there are almost no public details explaining what the
+    company actually contributes. From what you can gather, Aterra specializes in
+    network infrastructure and internet data management.\L\n\"Maybe they help keep
+    the internet safe... and ethical.\"\L\nWith no better opportunities and eager
+    to start your career, you accept the offer.\nToday is your first day."
   CompanyHeirarchySprites: []
