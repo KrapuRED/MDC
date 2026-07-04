@@ -140,12 +140,12 @@ TextureImporter:
       name: UI_GameOver_LiabilityTerminated_0
       rect:
         serializedVersion: 2
-        x: 551
-        y: 404
-        width: 794
-        height: 539
+        x: 214
+        y: 385
+        width: 1498
+        height: 634
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -158,187 +158,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: UI_GameOver_LiabilityTerminated_1
-      rect:
-        serializedVersion: 2
-        x: 893
-        y: 905
-        width: 116
-        height: 104
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 05b9d241adfa74f70800000000000000
-      internalID: 9171492517339568976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_GameOver_LiabilityTerminated_2
-      rect:
-        serializedVersion: 2
-        x: 401
-        y: 650
-        width: 134
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eb105e85c6b5c6210800000000000000
-      internalID: 1327536511073452478
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_GameOver_LiabilityTerminated_3
-      rect:
-        serializedVersion: 2
-        x: 1361
-        y: 650
-        width: 164
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a7767aac1d868b410800000000000000
-      internalID: 1493058526730741626
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_GameOver_LiabilityTerminated_4
-      rect:
-        serializedVersion: 2
-        x: 221
-        y: 404
-        width: 164
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3ae0549d0aa197300800000000000000
-      internalID: 250260532438044323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_GameOver_LiabilityTerminated_5
-      rect:
-        serializedVersion: 2
-        x: 401
-        y: 404
-        width: 134
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dca8b72f57ae6cf70800000000000000
-      internalID: 9207304280505813709
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_GameOver_LiabilityTerminated_6
-      rect:
-        serializedVersion: 2
-        x: 1241
-        y: 404
-        width: 164
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dde400d8000845b60800000000000000
-      internalID: 7733947199955947229
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_GameOver_LiabilityTerminated_7
-      rect:
-        serializedVersion: 2
-        x: 1421
-        y: 404
-        width: 134
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7cdd5edeb68ae3550800000000000000
-      internalID: 6142532123286166983
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_GameOver_LiabilityTerminated_8
-      rect:
-        serializedVersion: 2
-        x: 1571
-        y: 404
-        width: 134
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 459a126519b190910800000000000000
-      internalID: 1804003436767848788
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9e7753d6b7a56ef4996f6486ff68d4d7
     internalID: 0
     vertices: []
     indices: 
