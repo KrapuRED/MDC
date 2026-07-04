@@ -7,7 +7,7 @@ public class PlayerHealthManager : MonoBehaviour
     public static PlayerHealthManager Instance { get; private set; }
 
     [SerializeField] private int maxHealth;
-    [SerializeField] private int extraHealth;
+    [SerializeField] private int currentExtraHealth;
     [SerializeField] private int currentHealth;
 
     [Header("Health UI Controller")]
@@ -27,6 +27,9 @@ public class PlayerHealthManager : MonoBehaviour
 
     private void Start()
     {
+        if (currentHealth >= 0)
+            return;
+
         currentHealth = maxHealth;
 
         if (currentHealth <= maxHealth)
@@ -35,24 +38,27 @@ public class PlayerHealthManager : MonoBehaviour
         healthUIController.InitializeNormalHearts(maxHealth);
     }
 
-    public void OnGetExtraHeart()
+    public void OnGetExtraHeart(int extraHealth)
     {
         healthUIController.InitializeNormalHearts(maxHealth);
         healthUIController.InitializeExtraHearts(extraHealth);
 
+        currentExtraHealth = extraHealth;
         currentHealth = maxHealth + extraHealth;
     }
 
     public void OnTakingDamage()
     {
-        currentHealth -= 1;
-
         if (currentHealth > maxHealth)
         {
-            healthUIController.UpdateExtraHealthUI(currentHealth);
+            currentExtraHealth -= 1;
+
+            healthUIController.UpdateExtraHealthUI(currentExtraHealth);
         }
         else
         {
+            currentHealth -= 1;
+
             healthUIController.HideExtraHeart();
             healthUIController.UpdateNormalHealthUI(currentHealth);
         }

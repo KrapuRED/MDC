@@ -59,6 +59,7 @@ public class HealthUIController : MonoBehaviour
 
     public void UpdateExtraHealthUI(int currentExtraHealth)
     {
+        Debug.Log($"Updating Extra Health UI: Current Extra Health = {currentExtraHealth}.");
         for (int i = 0; i < _extraHeartIcons.Count; i++)
         {
             _extraHeartIcons[i].sprite = i < currentExtraHealth ? fullExtraHeartSprite : emptyExtraHeartSprite;
