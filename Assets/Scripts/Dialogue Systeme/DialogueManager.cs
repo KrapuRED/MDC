@@ -11,6 +11,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private DialogueBox playerDialogueBox;
     [SerializeField] private DialogueBox npcDialogueBox;
 
+    [SerializeField] private Computer computer;
+
     private List<DialogueLine> _dialogueLines = new();
     private int _dialogueCount = -1;
     
@@ -23,7 +25,8 @@ public class DialogueManager : MonoBehaviour
         else
             Destroy(gameObject);
 
-        _dialogueLines = dialogueData.dialogueList;
+        if (dialogueData != null)
+            _dialogueLines = dialogueData.dialogueList;
     }
 
     private void ContinueDialogue()
@@ -34,6 +37,9 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.Log($"{dialogueData.name} is done, you can go to work!");
             dialogueHUD.HideDialogueHUD();
+
+            npcDialogueBox.EndDialogue();
+            computer.TurnOnComputer();
 
             return;
         }
@@ -61,6 +67,9 @@ public class DialogueManager : MonoBehaviour
     public void TriggerDialogue()
     {
         if (isDialogueActive)
+            return;
+
+        if (dialogueData == null)
             return;
 
         Debug.Log($"start dialogue, {dialogueData.name} with total dialogue {dialogueData.dialogueList.Count}");

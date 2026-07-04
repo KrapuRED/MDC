@@ -19,6 +19,7 @@ public class DataFlowLineDataSpawner : MonoBehaviour
 
     private List<GroupSpawnConfig> _groupSpawnConfig = new ();
     private List<DataSpawnConfig> _dataSpawnConfig = new();
+    private List<DataType> _controlledDatas = new();
     private float currentSpawnInterval;
     private bool isIntilize;
 
@@ -60,7 +61,7 @@ public class DataFlowLineDataSpawner : MonoBehaviour
         }
     }
 
-    public void IntilizeDataSpawner(DataFlowLineData config)
+    public void IntilizeDataSpawner(DataFlowLineData config, List<DataType> controlledDatas)
     {
         if (config == null)
         {
@@ -68,6 +69,7 @@ public class DataFlowLineDataSpawner : MonoBehaviour
             return;
         }
 
+        _controlledDatas = controlledDatas;
         spawnIntervalMin = config.spawnIntervalMin;
         spawnIntervalMax = config.spawnIntervalMax;
 
@@ -166,6 +168,6 @@ public class DataFlowLineDataSpawner : MonoBehaviour
         }
 
         // Run the main logic with the validated parameters
-        groupData.FillGroup(_dataSpawnConfig, endPosition, speedMode);
+        groupData.FillGroup(_dataSpawnConfig, _controlledDatas, endPosition, speedMode);
     }
 }

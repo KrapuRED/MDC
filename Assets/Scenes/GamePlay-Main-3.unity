@@ -274,6 +274,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7701932660270639259, guid: 5f83fbb7e5ac4484b9cfcdc2b10d89e6, type: 3}
   m_PrefabInstance: {fileID: 19607174}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &194255848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 194255849}
+  m_Layer: 0
+  m_Name: ==== Audio ====
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &194255849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194255848}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.3129241, y: -1.0336947, z: 7.685472}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1601662127}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &544696348 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7701932660270639259, guid: 5f83fbb7e5ac4484b9cfcdc2b10d89e6, type: 3}
@@ -1179,6 +1211,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1601662126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1601662127}
+  - component: {fileID: 1601662128}
+  m_Layer: 0
+  m_Name: Start Music Audio - BGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1601662127
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601662126}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 194255849}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1601662128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601662126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7fd6992ab2ade3448877eefe6cf94b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicTrack: Gameplay
 --- !u!1 &1640014592
 GameObject:
   m_ObjectHideFlags: 0
@@ -2640,6 +2717,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1725580611241510529, guid: b40269f8e1437de4db35fe3734ba6ff6, type: 3}
+      propertyPath: level
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7360806820200722866, guid: b40269f8e1437de4db35fe3734ba6ff6, type: 3}
       propertyPath: m_Name
       value: DDOL - Gama Manager
@@ -2760,3 +2841,4 @@ SceneRoots:
   - {fileID: 8896839837063898073}
   - {fileID: 7276218567474527282}
   - {fileID: 2120800381}
+  - {fileID: 194255849}

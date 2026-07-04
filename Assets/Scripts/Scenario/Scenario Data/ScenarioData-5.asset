@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc734659cc18bf4cb15e019cad8bc2b, type: 3}
+  m_Name: ScenarioData-5
+  m_EditorClassIdentifier: 
+  ScenarioText: 'The Offer
+
+    Years pass, and society remains in chaos. Mass unemployment
+    has become the new normal, while governments struggle to control growing public
+    anger. Companies continue relying on the same AI system that once assisted you,
+    now evolved into a nearly perfect worker.
+
+
+    One day, your former employer
+    unexpectedly offers you your job back. They admit that maintaining a fully autonomous
+    AI workforce has become more expensive than expected and invite you to return.
+    The offer, however, comes with minimum wage and a lengthy employment contract
+    filled with unfamiliar clauses. With your savings nearly exhausted and no other
+    way to survive, you sign without reading the agreement, unaware of what is waiting
+    for you when you return to the office.'
+  CompanyHeirarchySprites: []

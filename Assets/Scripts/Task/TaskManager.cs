@@ -6,6 +6,7 @@ public class ActiveTaskData
 {
     public TaskData taskData;
     public int currentInterceptedDataCount;
+    public bool isCompletion;
 }
 
 public class TaskManager : MonoBehaviour
@@ -53,9 +54,30 @@ public class TaskManager : MonoBehaviour
         if (activeTask.currentInterceptedDataCount >= activeTask.taskData.interceptedDataCount)
         {
             Debug.Log($"Task [{activeTask.taskData.taskName}] completed!");
-            GameManager.Instance.PlayerWinning();
+            SoundEffectManager.Instance.PlaySoundEffect("Task Complete");
+
+            activeTask.isCompletion = true;
             // Handle task completion logic here (e.g., reward the player, update UI, etc.)
         }
+
+        CheckAllTaskCompletion();
+    }
+
+    private void CheckAllTaskCompletion()
+    {
+        bool allTaskDone = true;
+
+        foreach (var task in activeTasks)
+        {
+            if (!task.isCompletion)
+            {
+                allTaskDone = false;
+                break; // no need to keep checking once we've found one unfinished task
+            }
+        }
+
+        if (allTaskDone)
+            GameManager.Instance.PlayerWinning();
     }
 
     public void CheckDropFile(DataFile dataFile)

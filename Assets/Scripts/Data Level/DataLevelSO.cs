@@ -50,5 +50,6 @@ public class DataFlowLineData
 [CreateAssetMenu(fileName = "DataLevelSO", menuName = "Data Levels/DataLevelSO")]
 public class DataLevelSO : ScriptableObject
 {
+    public List<DataType> controlledDataTypes;
     public List<DataFlowLineData> dataFlowLineDataList = new ();
 }

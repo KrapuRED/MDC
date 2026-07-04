@@ -7,6 +7,9 @@ public class ScenarioManager : MonoBehaviour
     [SerializeField] private ScenarioDataSO scenarioData;
     [SerializeField] private ScenarioUIController scenarioUIController;
 
+    private bool isDoneRead;
+    public bool IsDoneRead => isDoneRead;
+
     private void Awake()
     {
         if (Instance == null)
@@ -22,11 +25,20 @@ public class ScenarioManager : MonoBehaviour
 
     public void ShowScenario()
     {
+        Debug.Log("ShowScenario");
+        if (scenarioData == null)
+        {
+            HideScenari();
+            return;
+        }
+
         scenarioUIController.ShowScenario(scenarioData);
     }
 
     public void HideScenari()
     {
+        isDoneRead = true;
         scenarioUIController.HideScenario();
+        DialogueManager.Instance.TriggerDialogue();
     }
 }

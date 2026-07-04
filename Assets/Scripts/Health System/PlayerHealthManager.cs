@@ -25,13 +25,12 @@ public class PlayerHealthManager : MonoBehaviour
 
     private void Start()
     {
-        // SELEKSI 2: Jika data di GameManager 0 (atau belum ada), cek apakah Inspector punya nilai
         if (currentHealth > 0)
         {
             // Biarkan currentHealth memakai nilai yang sudah ada sekarang (tidak di-override)
             InitializeUI();
         }
-        // SELEKSI 3: Jika dua kondisi di atas tidak terpenuhi, baru set ke MaxHealth
+
         else
         {
             currentHealth = maxHealth;
@@ -70,7 +69,6 @@ public class PlayerHealthManager : MonoBehaviour
         if (currentExtraHealth > 0)
         {
             currentExtraHealth -= 1;
-            currentHealth -= 1; // keep combined total in sync (fixes the earlier bug too)
             healthUIController.UpdateExtraHealthUI(currentExtraHealth);
         }
         else
@@ -79,6 +77,8 @@ public class PlayerHealthManager : MonoBehaviour
 
             if (currentHealth <= 0)
             {
+                SoundEffectManager.Instance.PlaySoundEffect("Game Fail");
+
                 GameManager.Instance.PlayerLosing();
             }
 

@@ -17,22 +17,24 @@ public class GroupData : MonoBehaviour
 
     public bool IsFilled => isFilled;
 
-    public void FillGroup(List<DataSpawnConfig> dataSpawnConfig, Transform endPoint, DataFlowLineSpeed speedMode)
+    public void FillGroup(List<DataSpawnConfig> dataSpawnConfig, List<DataType> controlledDatas, Transform endPoint, DataFlowLineSpeed speedMode)
     {
-        maxDataCount = dataSlots.Count;
-        dataCount = Mathf.Clamp(dataCount, 1, dataSlots.Count);
+        int maxDataCount = dataSlots.Count;
+        dataCount = Mathf.Clamp(dataCount, 1, maxDataCount);
 
-        for (int i = 0; i < maxDataCount; i++)
+        for (int i = 0; i < dataCount; i++)
         {
             DataType type = GetRandomDataType(dataSpawnConfig);
             DataFile item = Instantiate(dataItemPrefab, dataSlots[i].position, Quaternion.identity, transform);
-            item.SetDataType(type);
+
+            bool isControlled = controlledDatas.Contains(type);
+            item.SetDataType(type, isControlled);
             _spawnedData.Add(item);
         }
 
-        if (_spawnedData.Count >= maxDataCount)
+        if (_spawnedData.Count >= dataCount)
         {
-            Debug.Log("Data group is filled to max capacity.");
+            Debug.Log("Data group is filled.");
             groupDataMover.InitializeMover(endPoint, speedMode);
         }
     }

@@ -2,20 +2,34 @@ using UnityEngine;
 
 public class Computer : MonoBehaviour, IInteractable
 {
+    public GameObject monitor;
+    public GameObject highlightMonitor;
+
+    private bool isComputerON;
+
     public void OnInteract()
     {
-       Debug.Log($"Interact with {gameObject.name}");
+        if (!isComputerON)
+            return;
+
+        GameManager.Instance.OnPlayGame();
+        Debug.Log($"Interact with {gameObject.name}");
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void TurnOnComputer()
     {
-        
+        isComputerON = true;
+        monitor.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnHighLightComputer()
     {
-        
+        highlightMonitor.SetActive(true);
+    }
+
+    public void OffHighLightComputer()
+    {
+        highlightMonitor.SetActive(false);
+
     }
 }

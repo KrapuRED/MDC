@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67d542d792180742a9bcadb8578e5c0, type: 3}
   m_Name: Level 5
   m_EditorClassIdentifier: 
+  controlledDataTypes: 00000000
   dataFlowLineDataList:
   - dataFlowLineName: Level 5 DATA FLOW 1
     dataFlowLineDirection: 2

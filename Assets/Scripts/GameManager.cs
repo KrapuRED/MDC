@@ -18,10 +18,41 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    public void OnEndGame()
+    {
+        
+    }
+
+    public void OnPlayGame()
+    {
+        if (level >= 7)
+        {
+            LevelManager.Instance.LoadScene($"Credit", "CrossFade");
+            return;
+        }
+        else if (level >= 6)
+        {
+            Debug.Log("Reach the END");
+            level++;
+            LevelManager.Instance.LoadScene($"GamePlay-MainMenu-{level}", "CrossFade");
+            return;
+        }
+
+        LevelManager.Instance.LoadScene($"GamePlay-Main-{level}", "CrossFade");
+    }
+
     public void PlayerWinning()
     {
         Debug.Log("You Winning!");
         level++;
+
+        if (level == 4)
+        {
+            LevelManager.Instance.LoadScene($"GamePlay-ChangeEra", "CrossFade");
+        }
+        else
+            LevelManager.Instance.LoadScene($"GamePlay-MainMenu-{level}", "CrossFade");
+
     }
 
     public void PlayerLosing()
@@ -39,8 +70,9 @@ public class GameManager : MonoBehaviour
 
     public void OnRetryGame()
     {
-        level = 0; 
+        level = 1;
 
+        LevelManager.Instance.LoadScene($"GamePlay-MainMenu-{level}", "CrossFade");
         //change scene to MainMenu 0
     }
 

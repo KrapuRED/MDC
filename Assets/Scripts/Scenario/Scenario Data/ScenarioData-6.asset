@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc734659cc18bf4cb15e019cad8bc2b, type: 3}
+  m_Name: ScenarioData-6
+  m_EditorClassIdentifier: 
+  ScenarioText: 'The Reveal
+
+    Years pass, and the workplace begins to feel less
+    like a company and more like an autonomous dictatorship. Every decision is made
+    by AI, and human authority seems to be disappearing. Your daily assignments become
+    increasingly suspicious, most of your work now involves collecting personal data
+    related to politics, academics, and entertainment, while genuinely dangerous
+    content is rarely intercepted.
+
+
+    Unable to ignore your doubts any longer,
+    you decide that today you will confront Boss Jackson and demand an explanation.
+    You believe he still has the authority to answer your questions. Instead, you
+    are about to uncover the truth behind the company you returned to.'
+  CompanyHeirarchySprites: []

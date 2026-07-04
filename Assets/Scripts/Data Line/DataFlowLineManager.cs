@@ -67,7 +67,7 @@ public class DataFlowLineManager : MonoBehaviour
             return;
         }
 
-        dataFlowLine.InitializeDataFlow(config);
+        dataFlowLine.InitializeDataFlow(config, dataLevelSO.controlledDataTypes);
     }
 
     public void ApplySpeedModifier(DataFlowLineSpeed speedMode)

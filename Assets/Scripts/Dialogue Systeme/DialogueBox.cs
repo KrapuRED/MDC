@@ -59,4 +59,9 @@ public class DialogueBox : MonoBehaviour
 
         ShowDialogueBox();
     }
+
+    public void EndDialogue()
+    {
+        spriteRenderer.sprite = null;
+    }
 }

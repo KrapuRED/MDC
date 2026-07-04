@@ -123,7 +123,7 @@ MonoBehaviour:
   educationControlledSprite: {fileID: 3674980124947390431, guid: fa5eda3abb2b22e48b46a323b0de6086, type: 3}
   entertainmentControlledSprite: {fileID: -7913222617248433636, guid: fa5eda3abb2b22e48b46a323b0de6086, type: 3}
   politicControlledSprite: {fileID: -7913222617248433636, guid: fa5eda3abb2b22e48b46a323b0de6086, type: 3}
-  personalControlledSprite: {fileID: 1422161140861167896, guid: 80cac8d759ef25f45b74231476608d64, type: 3}
+  personalControlledSprite: {fileID: -4935486817767358318, guid: fa5eda3abb2b22e48b46a323b0de6086, type: 3}
 --- !u!114 &5953083517799820167
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -48,7 +48,7 @@ MonoBehaviour:
     charType: 1
     dialogueText: Just speak naturally.
   - nameCharacter: Alice
-    charType: 0
+    charType: 1
     dialogueText: It can understand and respond like a conversation.
   - nameCharacter: You
     charType: 0
@@ -60,13 +60,13 @@ MonoBehaviour:
     charType: 3
     dialogueText: Hello!
   - nameCharacter: AI Asisstant
-    charType: 0
+    charType: 3
     dialogueText: It's wonderful to meet you!
   - nameCharacter: AI Asisstant
-    charType: 0
+    charType: 3
     dialogueText: I'm your personal AI Assistant.
   - nameCharacter: AI Asisstant
-    charType: 0
+    charType: 3
     dialogueText: I'll be helping you with your work from now on!
   - nameCharacter: You
     charType: 0
@@ -85,12 +85,12 @@ MonoBehaviour:
     charType: 1
     dialogueText: During work, it'll make your daily tasks easier.
   - nameCharacter: AI Asisstant
-    charType: 0
+    charType: 3
     dialogueText: I'll always do my best to support you!
   - nameCharacter: You
     charType: 0
     dialogueText: So... this was developed by Aterra?
-  - nameCharacter: 
+  - nameCharacter: Alice
     charType: 1
     dialogueText: Partially.
   - nameCharacter: Alice
@@ -116,7 +116,7 @@ MonoBehaviour:
     charType: 1
     dialogueText: You'll have plenty of time to get familiar with your new assistant.
   - nameCharacter: AI Assistant
-    charType: 1
+    charType: 3
     dialogueText: I'm looking forward to working with you!
   - nameCharacter: Alice
     charType: 1

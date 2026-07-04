@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class DataFlowLine : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class DataFlowLine : MonoBehaviour
     private DataFlowLineSpeed? _pendingSpeedMode;
     private bool isInitialize;
 
-    public void InitializeDataFlow(DataFlowLineData config)
+    public void InitializeDataFlow(DataFlowLineData config, List<DataType> controlledDatas)
     {
         direction = config.dataFlowLineDirection;
         speedMode     = config.dataFlowLineSpeed;
@@ -31,7 +32,7 @@ public class DataFlowLine : MonoBehaviour
             SwapPosition();
         }
 
-        dataFlowLineDataSpawner.IntilizeDataSpawner(config);
+        dataFlowLineDataSpawner.IntilizeDataSpawner(config, controlledDatas);
         isInitialize = true;
 
         if (_pendingSpeedMode.HasValue)

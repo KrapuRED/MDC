@@ -41,6 +41,7 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
     private BoxCollider2D _boxCollider2D;
     private GroupData _ownerData;
     private bool isDeatch;
+    private bool _isBeingDestroyed;
 
     public DataType DataType => dataType;
     public DataFileAnimation DataFileAnimation => dataFileAnimation;
@@ -79,7 +80,7 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
     }
 
 
-    public void SetDataType(DataType type)
+    public void SetDataType(DataType type, bool isControlled)
     {
         dataType = type;
         if (_spriteRenderer == null)
@@ -88,7 +89,9 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
             return;
         }
 
-        if (GameManager.Instance.Level >= controlledData)
+        Debug.Log($"{dataType.ToString()} is {isControlled}");
+
+        if (GameManager.Instance.Level >= controlledData && isControlled)
         {
             _spriteRenderer.sprite = type switch
             {
@@ -117,6 +120,8 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
 
     private void DataCrash(DataFile other)
     {
+        if (_isBeingDestroyed) return;
+
         if (destroyCoroutine != null)
         {
             return; // Already in the process of being destroyed
@@ -125,7 +130,7 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
         Debug.Log($"[{gameObject.name}] crashed into [{other.gameObject.name}]");
         PlayerHealthManager.Instance.OnTakingDamage();
 
-        //Play bliking animation
+        SoundEffectManager.Instance.PlaySoundEffect("Data Collide");
 
         other.StartCrashDestroy();
         StartCrashDestroy();
@@ -134,6 +139,8 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
 
     public void StartCrashDestroy()
     {
+        if (_isBeingDestroyed) return;
+
         if (destroyCoroutine != null) return;
 
         transform.SetParent(null, worldPositionStays: true);
@@ -155,6 +162,8 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
 
     public void OnDrop(Vector2 dropPosition)
     {
+        if (_isBeingDestroyed) return;
+
         transform.position = dropPosition;
         transform.SetParent(null, worldPositionStays: true);
 
@@ -166,6 +175,9 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
 
     public void DestroyDataFileByDropFile()
     {
+        if (_isBeingDestroyed) return;
+        _isBeingDestroyed = true;
+
         if (destroyCoroutine != null)
         {
             return; // Already in the process of being destroyed

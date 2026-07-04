@@ -20,6 +20,8 @@ public class DropBox : MonoBehaviour, IIndicatorable
 
         data.DestroyDataFileByDropFile();
 
+        SoundEffectManager.Instance.PlaySoundEffect("Data Received");
+
         TaskManager.Instance.CheckDropFile(data);
     }
 
