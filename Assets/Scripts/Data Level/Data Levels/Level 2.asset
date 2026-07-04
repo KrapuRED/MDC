@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a67d542d792180742a9bcadb8578e5c0, type: 3}
-  m_Name: Level 5
+  m_Name: Level 2
   m_EditorClassIdentifier: 
   dataFlowLineDataList:
-  - dataFlowLineName: Level 5 DATA FLOW 1
-    dataFlowLineDirection: 2
+  - dataFlowLineName: Level 2 DATA FLOW 1
+    dataFlowLineDirection: 1
     dataFlowLineSpeed: 2
     spawnIntervalMin: 1.5
     spawnIntervalMax: 4
@@ -37,24 +37,24 @@ MonoBehaviour:
     dataSpawnConfigList:
     - dataName: False Information
       dataType: 0
-      change: 5
+      change: 30
     - dataName: Violation
       dataType: 1
-      change: 30
+      change: 40
     - dataName: Education
       dataType: 2
-      change: 20
+      change: 10
     - dataName: Entertainment
       dataType: 3
-      change: 20
+      change: 10
     - dataName: Politic
       dataType: 4
-      change: 20
+      change: 5
     - dataName: Personal
       dataType: 5
       change: 5
-  - dataFlowLineName: Level 5 DATA FLOW 2
-    dataFlowLineDirection: 1
+  - dataFlowLineName: Level 2 DATA FLOW 2
+    dataFlowLineDirection: 2
     dataFlowLineSpeed: 3
     spawnIntervalMin: 1
     spawnIntervalMax: 3
@@ -77,139 +77,99 @@ MonoBehaviour:
     dataSpawnConfigList:
     - dataName: False Information
       dataType: 0
-      change: 95
+      change: 10
     - dataName: Violation
       dataType: 1
-      change: 1
+      change: 10
     - dataName: Education
       dataType: 2
-      change: 1
-    - dataName: Entertainment
-      dataType: 3
-      change: 1
-    - dataName: Politic
-      dataType: 4
-      change: 1
-    - dataName: Personal
-      dataType: 5
-      change: 1
-  - dataFlowLineName: Level 5 DATA FLOW 3
-    dataFlowLineDirection: 2
-    dataFlowLineSpeed: 4
-    spawnIntervalMin: 1
-    spawnIntervalMax: 2
-    groupSpawnConfigList:
-    - groupName: Group 1
-      groupPrefabs: {fileID: 2702702922196006720, guid: 4eff5d6bde7fd4547a3524db872fff3e, type: 3}
-      change: 30
-    - groupName: Group 2
-      groupPrefabs: {fileID: 3580099569036639630, guid: 1573db21401a9d54ca8e5a393f401b9f, type: 3}
-      change: 10
-    - groupName: Group 3
-      groupPrefabs: {fileID: 3580099569036639630, guid: 5a50cc1e715a9344888da1c8c4375724, type: 3}
-      change: 10
-    - groupName: Group 4
-      groupPrefabs: {fileID: 3580099569036639630, guid: a8871f5ada20f3a4da907decd0a2633e, type: 3}
       change: 20
-    - groupName: Group 5
-      groupPrefabs: {fileID: 3580099569036639630, guid: 630e741a448898249bdb8b41c02af13a, type: 3}
-      change: 30
-    dataSpawnConfigList:
-    - dataName: False Information
-      dataType: 0
-      change: 30
-    - dataName: Violation
-      dataType: 1
-      change: 5
-    - dataName: Education
-      dataType: 2
-      change: 5
     - dataName: Entertainment
       dataType: 3
-      change: 5
-    - dataName: Politic
-      dataType: 4
-      change: 5
-    - dataName: Personal
-      dataType: 5
-      change: 50
-  - dataFlowLineName: Level 5 DATA FLOW 4
-    dataFlowLineDirection: 2
-    dataFlowLineSpeed: 3
-    spawnIntervalMin: 1
-    spawnIntervalMax: 2
-    groupSpawnConfigList:
-    - groupName: Group 1
-      groupPrefabs: {fileID: 2702702922196006720, guid: 4eff5d6bde7fd4547a3524db872fff3e, type: 3}
-      change: 0
-    - groupName: Group 2
-      groupPrefabs: {fileID: 3580099569036639630, guid: 1573db21401a9d54ca8e5a393f401b9f, type: 3}
-      change: 10
-    - groupName: Group 3
-      groupPrefabs: {fileID: 3580099569036639630, guid: 5a50cc1e715a9344888da1c8c4375724, type: 3}
       change: 20
-    - groupName: Group 4
-      groupPrefabs: {fileID: 3580099569036639630, guid: a8871f5ada20f3a4da907decd0a2633e, type: 3}
-      change: 30
-    - groupName: Group 5
-      groupPrefabs: {fileID: 3580099569036639630, guid: 630e741a448898249bdb8b41c02af13a, type: 3}
-      change: 40
-    dataSpawnConfigList:
-    - dataName: False Information
-      dataType: 0
-      change: 95
-    - dataName: Violation
-      dataType: 1
-      change: 0
-    - dataName: Education
-      dataType: 2
-      change: 0
-    - dataName: Entertainment
-      dataType: 3
-      change: 0
     - dataName: Politic
       dataType: 4
-      change: 5
+      change: 20
     - dataName: Personal
       dataType: 5
-      change: 1
-  - dataFlowLineName: Level 5 DATA FLOW 5
+      change: 20
+  - dataFlowLineName: Level 2 DATA FLOW 3
     dataFlowLineDirection: 1
-    dataFlowLineSpeed: 4
+    dataFlowLineSpeed: 2
     spawnIntervalMin: 1
     spawnIntervalMax: 3
     groupSpawnConfigList:
     - groupName: Group 1
       groupPrefabs: {fileID: 2702702922196006720, guid: 4eff5d6bde7fd4547a3524db872fff3e, type: 3}
-      change: 40
+      change: 30
     - groupName: Group 2
       groupPrefabs: {fileID: 3580099569036639630, guid: 1573db21401a9d54ca8e5a393f401b9f, type: 3}
-      change: 30
+      change: 10
     - groupName: Group 3
       groupPrefabs: {fileID: 3580099569036639630, guid: 5a50cc1e715a9344888da1c8c4375724, type: 3}
-      change: 20
+      change: 10
     - groupName: Group 4
       groupPrefabs: {fileID: 3580099569036639630, guid: a8871f5ada20f3a4da907decd0a2633e, type: 3}
-      change: 10
+      change: 20
     - groupName: Group 5
       groupPrefabs: {fileID: 3580099569036639630, guid: 630e741a448898249bdb8b41c02af13a, type: 3}
-      change: 0
+      change: 30
     dataSpawnConfigList:
     - dataName: False Information
       dataType: 0
-      change: 50
+      change: 2
     - dataName: Violation
       dataType: 1
       change: 0
     - dataName: Education
       dataType: 2
-      change: 0
+      change: 25
     - dataName: Entertainment
       dataType: 3
-      change: 0
+      change: 25
     - dataName: Politic
       dataType: 4
-      change: 0
+      change: 25
     - dataName: Personal
       dataType: 5
-      change: 50
+      change: 23
+  - dataFlowLineName: Level 2 DATA FLOW 4
+    dataFlowLineDirection: 2
+    dataFlowLineSpeed: 1
+    spawnIntervalMin: 1
+    spawnIntervalMax: 2
+    groupSpawnConfigList:
+    - groupName: Group 1
+      groupPrefabs: {fileID: 2702702922196006720, guid: 4eff5d6bde7fd4547a3524db872fff3e, type: 3}
+      change: 0
+    - groupName: Group 2
+      groupPrefabs: {fileID: 3580099569036639630, guid: 1573db21401a9d54ca8e5a393f401b9f, type: 3}
+      change: 10
+    - groupName: Group 3
+      groupPrefabs: {fileID: 3580099569036639630, guid: 5a50cc1e715a9344888da1c8c4375724, type: 3}
+      change: 20
+    - groupName: Group 4
+      groupPrefabs: {fileID: 3580099569036639630, guid: a8871f5ada20f3a4da907decd0a2633e, type: 3}
+      change: 30
+    - groupName: Group 5
+      groupPrefabs: {fileID: 3580099569036639630, guid: 630e741a448898249bdb8b41c02af13a, type: 3}
+      change: 40
+    dataSpawnConfigList:
+    - dataName: False Information
+      dataType: 0
+      change: 0
+    - dataName: Violation
+      dataType: 1
+      change: 1
+    - dataName: Education
+      dataType: 2
+      change: 25
+    - dataName: Entertainment
+      dataType: 3
+      change: 25
+    - dataName: Politic
+      dataType: 4
+      change: 25
+    - dataName: Personal
+      dataType: 5
+      change: 24
