@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 42aa18ca80dde9348a0e7aa1b84070e1
+guid: dc54139397538c746a7a1735771b4321
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -172536021460500528
-    second: GameplayScene_UI_DropboxPanel_0
+      213: 2781662129690742042
+    second: CharacterIcon_Player_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GameplayScene_UI_DropboxPanel_0
+      name: CharacterIcon_Player_0
       rect:
         serializedVersion: 2
-        x: 377
+        x: 0
         y: 0
-        width: 710
-        height: 298
+        width: 228
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0df33e117670b9df0800000000000000
-      internalID: -172536021460500528
+      spriteID: a1d8f5518f27a9620800000000000000
+      internalID: 2781662129690742042
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GameplayScene_UI_DropboxPanel_0: -172536021460500528
+      CharacterIcon_Player_0: 2781662129690742042
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
