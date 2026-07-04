@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6221731800315113906}
   - component: {fileID: 4927864263199339470}
   - component: {fileID: 2123672230640225590}
+  - component: {fileID: 5953083517799820167}
   - component: {fileID: 6952858023694654821}
   - component: {fileID: 7489721753226951140}
   m_Layer: 0
@@ -103,10 +104,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataType: 6
-  immuneTime: 1
+  dataFileAnimation: {fileID: 5953083517799820167}
+  immuneTime: 0.5
   isImmune: 1
   currentImmuneTimer: 0
-  crashDestroyDelay: 0
+  crashDestroyDelay: 1
   dropDataDestroyDelay: 1.5
   _spriteRenderer: {fileID: 4927864263199339470}
   falseSprite: {fileID: 182991386114293469, guid: 80cac8d759ef25f45b74231476608d64, type: 3}
@@ -115,6 +117,20 @@ MonoBehaviour:
   entertainmentSprite: {fileID: -226370112080214077, guid: 80cac8d759ef25f45b74231476608d64, type: 3}
   politicSprite: {fileID: -6353987807351945803, guid: 80cac8d759ef25f45b74231476608d64, type: 3}
   personalSprite: {fileID: -5795024578967427399, guid: fa5eda3abb2b22e48b46a323b0de6086, type: 3}
+--- !u!114 &5953083517799820167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6590740340018707397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a33a115c5f9362e4eac129c0624cd61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeCrashDuration: 1.5
+  spriteRenderer: {fileID: 4927864263199339470}
 --- !u!61 &6952858023694654821
 BoxCollider2D:
   m_ObjectHideFlags: 0

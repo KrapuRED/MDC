@@ -5,6 +5,7 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
 {
 
     [SerializeField] private DataType dataType;
+    [SerializeField] private DataFileAnimation dataFileAnimation;
 
     [Header("Data File Immune Crash Config")]
     [SerializeField] private float immuneTime; // Time during which the data file is immune to crashes after being spawned
@@ -32,6 +33,7 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
     private bool isDeatch;
 
     public DataType DataType => dataType;
+    public DataFileAnimation DataFileAnimation => dataFileAnimation;
 
     private void Start()
     {
@@ -100,9 +102,19 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
 
         //Play bliking animation
 
-        other.destroyCoroutine = other.StartCoroutine(other.DestroyAfterDelay(other.crashDestroyDelay));
-        destroyCoroutine = StartCoroutine(DestroyAfterDelay(crashDestroyDelay));
+        other.StartCrashDestroy();
+        StartCrashDestroy();
         // e.g. destroy both, play VFX, reset drag, penalize player, etc.
+    }
+
+    public void StartCrashDestroy()
+    {
+        if (destroyCoroutine != null) return;
+
+        transform.SetParent(null, worldPositionStays: true);
+        _boxCollider2D.enabled = false;
+
+        dataFileAnimation.PlayCrashDataFileAnimation(crashDestroyDelay, () => Destroy(gameObject));
     }
 
     public void OnDrag()
