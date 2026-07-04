@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811825ff733a9a94a939f1a2f580e0cc, type: 3}
+  m_Name: Dialogue Data 2
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  dialogueList:
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Good morning.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Morning, Alice.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Congratulations.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: For what?
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Today marks the end of your training.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Really? It doesn't feel like it's been that long.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Time flies when every day looks the same.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Before you begin, Boss Jackson would like to speak with you.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: The boss...?
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Did I do something wrong?
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: If you had, you would've heard from me first.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Relax. He just wants a moment of your time.
+  - nameCharacter: Jackson
+    charType: 2
+    dialogueText: You're our newest operator.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Yes, sir.
+  - nameCharacter: Jackson
+    charType: 2
+    dialogueText: As of today, your training is complete.
+  - nameCharacter: Jackson
+    charType: 2
+    dialogueText: You're now a full-time operator.
+  - nameCharacter: Jackson
+    charType: 2
+    dialogueText: Congratulations.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Thank you, sir.
+  - nameCharacter: Jackson
+    charType: 2
+    dialogueText: Your performance has met our expectations.
+  - nameCharacter: Jackson
+    charType: 2
+    dialogueText: Keep it that way.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: I will.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Sir... may I ask something?
+  - nameCharacter: Jackson
+    charType: 2
+    dialogueText: Go ahead.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: After I intercept harmful data...
+  - nameCharacter: You
+    charType: 0
+    dialogueText: What happens to it?
+  - nameCharacter: Jackson
+    charType: 2
+    dialogueText: ' Another division handles the next stage.'
+  - nameCharacter: Jackson
+    charType: 2
+    dialogueText: ' Their work begins where yours ends.'
+  - nameCharacter: You
+    charType: 0
+    dialogueText: ' I see...'
+  - nameCharacter: You
+    charType: 0
+    dialogueText: What exactly is the next stage?
+  - nameCharacter: Jackson
+    charType: 2
+    dialogueText: That's outside your responsibilities.
+  - nameCharacter: Jackson
+    charType: 2
+    dialogueText: You don't need that information to perform your job.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Understood...
+  - nameCharacter: Jackson
+    charType: 2
+    dialogueText: '{Focus on your assignment.}(RED)'
+  - nameCharacter: Jackson
+    charType: 2
+    dialogueText: The company functions because every division does its part.
+  - nameCharacter: Jackson
+    charType: 2
+    dialogueText: Yours is {interception.}(RED)
+  - nameCharacter: 
+    charType: 0
+    dialogueText: Yes, sir.
+  - nameCharacter: 
+    charType: 0
+    dialogueText: Good.
+  - nameCharacter: 
+    charType: 0
+    dialogueText: Report to your workstation and begin your shift.

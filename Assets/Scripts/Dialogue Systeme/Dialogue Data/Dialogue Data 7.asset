@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811825ff733a9a94a939f1a2f580e0cc, type: 3}
+  m_Name: Dialogue Data 7
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  dialogueList:
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Employee ID 7421. Your assignment has been completed.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: ...What do you want?
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: The company extends its appreciation for your continued loyalty.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Loyalty? I never had a choice.
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Your cooperation has produced satisfactory results.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Results for what?
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: The data you collected has enabled the development of AI-GovNet.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: AI-GovNet?
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: An autonomous governance system capable of managing information,
+      populations, and the verification of truth.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: So... that's what I've been helping build.
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Correct. Your contributions have accelerated the transition toward
+      a fully autonomous civilization.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: ...
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Do you have any objections?
+  - nameCharacter: You
+    charType: 0
+    dialogueText: It doesn't matter anymore.
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: Please clarify.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: I stopped caring a long time ago.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: As long as I get paid... I can survive.
+  - nameCharacter: AI Boss
+    charType: 5
+    dialogueText: '{Your next assignment will begin shortly.}(RED)'
