@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +12,7 @@ public class CursorController : MonoBehaviour
     [Header("Detection Config")]
     [SerializeField] private float grabRadius = 0.6f;
 
+    private IInteractable _hoveredInteractable;
     private GamePlayInput _gamePlayInput;
     private Camera mainCam;
 
@@ -36,6 +36,9 @@ public class CursorController : MonoBehaviour
 
     private void Start()
     {
+        // Daftarkan event Click (Gunakan started atau performed tergantung konfigurasi action-mu)
+        _gamePlayInput.Mouse.Click.performed += _ => OnClick();
+
         _gamePlayInput.Mouse.Drag.started += _ => OnStartDrag();
         _gamePlayInput.Mouse.Drag.canceled += _ => OnEndDrag();
     }
@@ -69,29 +72,48 @@ public class CursorController : MonoBehaviour
         Collider2D[] hits = Physics2D.OverlapCircleAll(mouseWorldPos, grabRadius);
 
         DataFile closestData = null;
-        float closestDistance = grabRadius; // Batas jarak maksimum deteksi
+        float closestDataDistance = grabRadius;
 
-        // 2. Cari objek dengan komponen DataFile yang posisinya paling dekat dengan kursor
+        IInteractable closestInteractable = null;
+        float closestInteractableDistance = grabRadius;
+
         foreach (Collider2D hit in hits)
         {
-            if (hit.TryGetComponent(out DataFile dataFile))
-            {
-                float distance = Vector2.Distance(mouseWorldPos, hit.transform.position);
+            float distance = Vector2.Distance(mouseWorldPos, hit.transform.position);
 
-                if (distance < closestDistance)
-                {
-                    closestDistance = distance;
-                    closestData = dataFile;
-                }
+            // Deteksi DataFile terdekat
+            if (hit.TryGetComponent(out DataFile dataFile) && distance < closestDataDistance)
+            {
+                closestDataDistance = distance;
+                closestData = dataFile;
+            }
+
+            // Deteksi IInteractable terdekat
+            if (hit.TryGetComponent(out IInteractable interactable) && distance < closestInteractableDistance)
+            {
+                closestInteractableDistance = distance;
+                closestInteractable = interactable;
             }
         }
 
-        // 3. Masukkan hasil objek terdekat ke hoveredObject2D
         hoveredObject2D = closestData;
+        _hoveredInteractable = closestInteractable;
+    }
 
-        if (hoveredObject2D != null)
+    private void StartClick()
+    {
+
+    }
+
+    private void OnClick()
+    {
+        // Jika sedang nge-drag objek, batalkan interaksi klik tombol/objek lain
+        if (isDragging) return;
+
+        if (_hoveredInteractable != null)
         {
-            Debug.Log($"Hovering: {hoveredObject2D.name}");
+            Debug.Log($"Mengklik & Berinteraksi dengan objek!");
+            _hoveredInteractable.OnInteract(); // Panggil fungsi interaksinya
         }
     }
 

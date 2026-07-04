@@ -97,23 +97,75 @@ public class DataFlowLineDataSpawner : MonoBehaviour
 
     private void GenerateData()
     {
-        if (!isSecureSpawn) 
-        { 
-            return; 
+        if (!isSecureSpawn)
+        {
+            return;
         }
 
+        // 1) Check if the prefab array/list returns a valid object
+        var groupPrefab = GetRandomGroupData();
+        if (groupPrefab == null)
+        {
+            Debug.LogError($"[{gameObject.name}] GenerateData failed: The group prefab is null! Check your GetRandomGroupData() logic or array configuration.");
+            return;
+        }
+
+        // 2) Verify the spawn starting point
+        if (startPosition == null)
+        {
+            Debug.LogError($"[{gameObject.name}] GenerateData failed: 'startPosition' is not assigned in the Inspector!");
+            return;
+        }
+
+        // If all initial checks pass, lock the spawn state
         isSecureSpawn = false;
 
-        // 1) Fill the group with data based on the group spawn config
-        var groupPrefab = GetRandomGroupData();
-        
+        // 3) Instantiate the object
         GameObject groupInstance = Instantiate(groupPrefab, startPosition.position, Quaternion.identity, spawnerContainer);
-        string newName = $"{transform.parent.name} - {groupInstance.name}";
+        if (groupInstance == null)
+        {
+            Debug.LogError($"[{gameObject.name}] GenerateData failed: Failed to instantiate {groupPrefab.name}!");
+            return;
+        }
+
+        // 4) Safely check for a parent name to avoid exceptions if this object has no parent
+        string parentName = transform.parent != null ? transform.parent.name : "NoParent";
+        string newName = $"{parentName} - {groupInstance.name}";
         groupInstance.name = newName;
+
+        // 5) Verify that the spawned instance actually contains the GroupData script
         GroupData groupData = groupInstance.GetComponent<GroupData>();
+        if (groupData == null)
+        {
+            Debug.LogWarning($"[{gameObject.name}] GenerateData failed: Prefab '{groupInstance.name}' is missing the 'GroupData' component!");
+            // Optional: Destroy the broken instance so it doesn't clutter your hierarchy
+            Destroy(groupInstance);
+            return;
+        }
 
         lastSpawnGroup = groupInstance.transform;
 
-        groupData.FillGroup(_dataSpawnConfig, endPosition, ownerDataFlowLine.SpeedFlowLine);
+        // 6) Verify the parameters needed before calling FillGroup
+        if (_dataSpawnConfig == null)
+        {
+            Debug.LogError($"[{gameObject.name}] GenerateData warning: '_dataSpawnConfig' is null!");
+        }
+        if (endPosition == null)
+        {
+            Debug.LogError($"[{gameObject.name}] GenerateData warning: 'endPosition' is not assigned in the Inspector!");
+        }
+
+        DataFlowLineSpeed speedMode = DataFlowLineSpeed.Normal;
+        if (ownerDataFlowLine == null)
+        {
+            Debug.LogWarning($"[{gameObject.name}] GenerateData warning: 'ownerDataFlowLine' is null! Falling back to default speedMode (0).");
+        }
+        else
+        {
+            speedMode = ownerDataFlowLine.SpeedFlowLine;
+        }
+
+        // Run the main logic with the validated parameters
+        groupData.FillGroup(_dataSpawnConfig, endPosition, speedMode);
     }
 }
