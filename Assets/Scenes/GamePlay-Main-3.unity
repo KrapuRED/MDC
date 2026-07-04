@@ -898,8 +898,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.54, y: 0.45}
-      - {x: -0.54, y: -0.68}
-      - {x: 0.54, y: -0.68}
+      - {x: -0.54, y: -0.46}
+      - {x: 0.54, y: -0.46}
       - {x: 0.54, y: 0.45}
   m_UseDelaunayMesh: 0
 --- !u!4 &1234267350 stripped
@@ -958,7 +958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeTasks: []
   taskUIController: {fileID: 170545147}
-  testTaksData: {fileID: 11400000, guid: 0fd981e96818f1b47ada9aaec7091819, type: 2}
+  testTaksData: {fileID: 11400000, guid: 4293176496fb90549a9d54047b7548b4, type: 2}
 --- !u!4 &1379815898 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7701932660270639259, guid: 5f83fbb7e5ac4484b9cfcdc2b10d89e6, type: 3}
@@ -989,7 +989,7 @@ Transform:
   m_GameObject: {fileID: 1421483054}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -9, z: 0}
+  m_LocalPosition: {x: -2.29, y: -5.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

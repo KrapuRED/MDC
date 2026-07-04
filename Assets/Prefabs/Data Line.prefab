@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 1708754147428720582}
-  lineWidth: 0.25
+  lineWidth: 0.02
 --- !u!120 &1708754147428720582
 LineRenderer:
   serializedVersion: 2
