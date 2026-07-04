@@ -12,7 +12,6 @@ public class CursorController : MonoBehaviour
     [Header("Detection Config")]
     [SerializeField] private float grabRadius = 0.6f;
 
-    private IInteractable _hoveredInteractable;
     private GamePlayInput _gamePlayInput;
     private Camera mainCam;
 
@@ -36,8 +35,6 @@ public class CursorController : MonoBehaviour
 
     private void Start()
     {
-        // Daftarkan event Click (Gunakan started atau performed tergantung konfigurasi action-mu)
-        _gamePlayInput.Mouse.Click.performed += _ => OnClick();
 
         _gamePlayInput.Mouse.Drag.started += _ => OnStartDrag();
         _gamePlayInput.Mouse.Drag.canceled += _ => OnEndDrag();
@@ -74,9 +71,6 @@ public class CursorController : MonoBehaviour
         DataFile closestData = null;
         float closestDataDistance = grabRadius;
 
-        IInteractable closestInteractable = null;
-        float closestInteractableDistance = grabRadius;
-
         foreach (Collider2D hit in hits)
         {
             float distance = Vector2.Distance(mouseWorldPos, hit.transform.position);
@@ -87,34 +81,9 @@ public class CursorController : MonoBehaviour
                 closestDataDistance = distance;
                 closestData = dataFile;
             }
-
-            // Deteksi IInteractable terdekat
-            if (hit.TryGetComponent(out IInteractable interactable) && distance < closestInteractableDistance)
-            {
-                closestInteractableDistance = distance;
-                closestInteractable = interactable;
-            }
         }
 
         hoveredObject2D = closestData;
-        _hoveredInteractable = closestInteractable;
-    }
-
-    private void StartClick()
-    {
-
-    }
-
-    private void OnClick()
-    {
-        // Jika sedang nge-drag objek, batalkan interaksi klik tombol/objek lain
-        if (isDragging) return;
-
-        if (_hoveredInteractable != null)
-        {
-            Debug.Log($"Mengklik & Berinteraksi dengan objek!");
-            _hoveredInteractable.OnInteract(); // Panggil fungsi interaksinya
-        }
     }
 
     private void OnStartDrag()
