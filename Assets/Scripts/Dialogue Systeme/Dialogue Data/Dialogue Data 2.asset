@@ -119,12 +119,12 @@ MonoBehaviour:
   - nameCharacter: Jackson
     charType: 2
     dialogueText: Yours is {interception.}(RED)
-  - nameCharacter: 
+  - nameCharacter: You
     charType: 0
     dialogueText: Yes, sir.
-  - nameCharacter: 
-    charType: 0
+  - nameCharacter: Jackson
+    charType: 2
     dialogueText: Good.
-  - nameCharacter: 
-    charType: 0
+  - nameCharacter: Jackson
+    charType: 2
     dialogueText: Report to your workstation and begin your shift.

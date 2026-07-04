@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: 8dabdb90ebd114d4b8b7226345252b00
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5813285091372799949
+    second: UI_GameOver_You'reFired_0
+  - first:
+      213: 3132175772741780337
+    second: UI_GameOver_You'reFired_1
+  - first:
+      213: -835008296706124956
+    second: UI_GameOver_You'reFired_2
+  - first:
+      213: 8436069910058569788
+    second: UI_GameOver_You'reFired_3
+  - first:
+      213: 2180687591388922978
+    second: UI_GameOver_You'reFired_4
+  - first:
+      213: -1227648158597628769
+    second: UI_GameOver_You'reFired_5
+  - first:
+      213: 1320794481686203840
+    second: UI_GameOver_You'reFired_6
+  - first:
+      213: 7262712082703946740
+    second: UI_GameOver_You'reFired_7
+  - first:
+      213: 581759646367825515
+    second: UI_GameOver_You'reFired_8
+  - first:
+      213: 5101165204529573933
+    second: UI_GameOver_You'reFired_9
+  - first:
+      213: -7640313665069105850
+    second: UI_GameOver_You'reFired_10
+  - first:
+      213: 2818804930345440118
+    second: UI_GameOver_You'reFired_11
+  - first:
+      213: 1637911123774853413
+    second: UI_GameOver_You'reFired_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UI_GameOver_You'reFired_0
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 728
+        width: 152
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33866ae6200135fa0800000000000000
+      internalID: -5813285091372799949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GameOver_You'reFired_1
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 728
+        width: 152
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 173cb543549b77b20800000000000000
+      internalID: 3132175772741780337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GameOver_You'reFired_2
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 728
+        width: 122
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463d352d0647964f0800000000000000
+      internalID: -835008296706124956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GameOver_You'reFired_3
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 728
+        width: 122
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c30176113e0f21570800000000000000
+      internalID: 8436069910058569788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GameOver_You'reFired_4
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 728
+        width: 122
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 264c6d28fcb534e10800000000000000
+      internalID: 2180687591388922978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GameOver_You'reFired_5
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 728
+        width: 122
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c30ad018486fee0800000000000000
+      internalID: -1227648158597628769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GameOver_You'reFired_6
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 461
+        width: 122
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cdc33e4597645210800000000000000
+      internalID: 1320794481686203840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GameOver_You'reFired_7
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 461
+        width: 32
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f39183e8265ac460800000000000000
+      internalID: 7262712082703946740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GameOver_You'reFired_8
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 461
+        width: 122
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6e396ae053d21800800000000000000
+      internalID: 581759646367825515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GameOver_You'reFired_9
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 461
+        width: 122
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d207194f9bafac640800000000000000
+      internalID: 5101165204529573933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GameOver_You'reFired_10
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 461
+        width: 122
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64d3ef4a33728f590800000000000000
+      internalID: -7640313665069105850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GameOver_You'reFired_11
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 512
+        width: 44
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6731c5446286e1720800000000000000
+      internalID: 2818804930345440118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GameOver_You'reFired_12
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 461
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 521d2423d770bb610800000000000000
+      internalID: 1637911123774853413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      UI_GameOver_You'reFired_0: -5813285091372799949
+      UI_GameOver_You'reFired_1: 3132175772741780337
+      UI_GameOver_You'reFired_10: -7640313665069105850
+      UI_GameOver_You'reFired_11: 2818804930345440118
+      UI_GameOver_You'reFired_12: 1637911123774853413
+      UI_GameOver_You'reFired_2: -835008296706124956
+      UI_GameOver_You'reFired_3: 8436069910058569788
+      UI_GameOver_You'reFired_4: 2180687591388922978
+      UI_GameOver_You'reFired_5: -1227648158597628769
+      UI_GameOver_You'reFired_6: 1320794481686203840
+      UI_GameOver_You'reFired_7: 7262712082703946740
+      UI_GameOver_You'reFired_8: 581759646367825515
+      UI_GameOver_You'reFired_9: 5101165204529573933
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
