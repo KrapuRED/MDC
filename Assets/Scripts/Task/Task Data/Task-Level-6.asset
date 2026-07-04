@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6b9eaeeaa453aa41bfa9e09d9cd935d, type: 3}
-  m_Name: TaskSO
+  m_Name: Task-Level-6
   m_EditorClassIdentifier: 
-  taskSOName: 
+  taskSOName: Task-Level-6
   taskDataList:
-  - taskName: Intercept False Information
-    interceptedDataCount: 1
-    dataType: 0
+  - taskName: Intercept Violation
+    interceptedDataCount: 2
+    dataType: 1
+  - taskName: Intercept Personal
+    interceptedDataCount: 5
+    dataType: 5

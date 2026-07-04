@@ -6,6 +6,7 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
 
     [SerializeField] private DataType dataType;
     [SerializeField] private DataFileAnimation dataFileAnimation;
+    [SerializeField] private int controlledData;
 
     [Header("Data File Immune Crash Config")]
     [SerializeField] private float immuneTime; // Time during which the data file is immune to crashes after being spawned
@@ -25,6 +26,15 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
     [SerializeField] private Sprite entertainmentSprite;
     [SerializeField] private Sprite politicSprite;
     [SerializeField] private Sprite personalSprite;
+
+    [Header("Data File Sprites")]
+    [SerializeField] private Sprite falseControlledSprite;
+    [SerializeField] private Sprite violationControlledSprite;
+    [SerializeField] private Sprite educationControlledSprite;
+    [SerializeField] private Sprite entertainmentControlledSprite;
+    [SerializeField] private Sprite politicControlledSprite;
+    [SerializeField] private Sprite personalControlledSprite;
+
     private Vector2 originalColliderSize;
 
     Coroutine destroyCoroutine;
@@ -75,6 +85,21 @@ public class DataFile : MonoBehaviour, IDragable, IHoverable
         if (_spriteRenderer == null)
         {
             Debug.LogError("SpriteRenderer is not assigned. Please ensure the component is attached.");
+            return;
+        }
+
+        if (GameManager.Instance.Level >= controlledData)
+        {
+            _spriteRenderer.sprite = type switch
+            {
+                DataType.False => falseControlledSprite,
+                DataType.Violation => violationControlledSprite,
+                DataType.Education => educationControlledSprite,
+                DataType.Entertainment => entertainmentControlledSprite,
+                DataType.Polictic => politicControlledSprite,
+                DataType.Personal => personalControlledSprite,
+                _ => null
+            };
             return;
         }
 

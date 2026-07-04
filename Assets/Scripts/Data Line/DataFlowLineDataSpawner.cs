@@ -106,7 +106,7 @@ public class DataFlowLineDataSpawner : MonoBehaviour
         var groupPrefab = GetRandomGroupData();
         if (groupPrefab == null)
         {
-            Debug.LogError($"[{gameObject.name}] GenerateData failed: The group prefab is null! Check your GetRandomGroupData() logic or array configuration.");
+            Debug.LogWarning($"[{gameObject.name}] GenerateData failed: The group prefab is null! Check your GetRandomGroupData() logic or array configuration.");
             return;
         }
 

@@ -10,6 +10,7 @@ public class DataFlowLine : MonoBehaviour
 
     [Header("Reference Object")]
     [SerializeField] private DataFlowLineDataSpawner dataFlowLineDataSpawner;
+    [SerializeField] private DataFlowStaticLineDrawer dataFlowStaticLineDrawer;
 
     [Header("Test Data Line")]
     [SerializeField] private Color right = Color.red;
@@ -39,6 +40,14 @@ public class DataFlowLine : MonoBehaviour
             ChangeSpeedMode(_pendingSpeedMode.Value);
             _pendingSpeedMode = null;
         }
+
+        Color lineColor = Color.white;
+        if (direction == DataFlowLineDirection.Right)
+            lineColor = right;
+        else
+            lineColor = left;
+
+        dataFlowStaticLineDrawer.DrawDataFlowLine(startPoint, endPoint, lineColor);
     }
 
     private void SwapPosition()

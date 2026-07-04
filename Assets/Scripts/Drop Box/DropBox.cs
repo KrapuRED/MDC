@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public class DropBox : MonoBehaviour
+public class DropBox : MonoBehaviour, IIndicatorable
 {
+    [SerializeField] private DropBoxIndiactor dropBoxIndiactor;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log($"[{gameObject.name}] is interact with [{collision.gameObject.name}]");
@@ -19,5 +21,15 @@ public class DropBox : MonoBehaviour
         data.DestroyDataFileByDropFile();
 
         TaskManager.Instance.CheckDropFile(data);
+    }
+
+    public void ShowIndicator()
+    {
+        dropBoxIndiactor.ShowIndicator();
+    }
+
+    public void HideIndicator()
+    {
+        dropBoxIndiactor.HideIndicator();
     }
 }

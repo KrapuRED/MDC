@@ -89,4 +89,7 @@ public class GlobalEvent : MonoBehaviour
     // ==================== DIALOGUE =================== 
     public static readonly CustomEvents OnShowHUDDialogue = new();
     public static readonly CustomEvents OnHideHUDDialogue = new();
+
+    // ==================== PANEL =================== 
+    public static readonly CustomEvents OnShowDeathPanel = new();
 }

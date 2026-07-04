@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -105,6 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataType: 6
   dataFileAnimation: {fileID: 5953083517799820167}
+  controlledData: 0
   immuneTime: 0.5
   isImmune: 1
   currentImmuneTimer: 0
@@ -116,7 +117,13 @@ MonoBehaviour:
   educationSprite: {fileID: 7237707273058968535, guid: 80cac8d759ef25f45b74231476608d64, type: 3}
   entertainmentSprite: {fileID: -226370112080214077, guid: 80cac8d759ef25f45b74231476608d64, type: 3}
   politicSprite: {fileID: -6353987807351945803, guid: 80cac8d759ef25f45b74231476608d64, type: 3}
-  personalSprite: {fileID: -5795024578967427399, guid: fa5eda3abb2b22e48b46a323b0de6086, type: 3}
+  personalSprite: {fileID: 1422161140861167896, guid: 80cac8d759ef25f45b74231476608d64, type: 3}
+  falseControlledSprite: {fileID: -5795024578967427399, guid: fa5eda3abb2b22e48b46a323b0de6086, type: 3}
+  violationControlledSprite: {fileID: 512072387819616942, guid: fa5eda3abb2b22e48b46a323b0de6086, type: 3}
+  educationControlledSprite: {fileID: 3674980124947390431, guid: fa5eda3abb2b22e48b46a323b0de6086, type: 3}
+  entertainmentControlledSprite: {fileID: -7913222617248433636, guid: fa5eda3abb2b22e48b46a323b0de6086, type: 3}
+  politicControlledSprite: {fileID: -7913222617248433636, guid: fa5eda3abb2b22e48b46a323b0de6086, type: 3}
+  personalControlledSprite: {fileID: -4935486817767358318, guid: fa5eda3abb2b22e48b46a323b0de6086, type: 3}
 --- !u!114 &5953083517799820167
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -53,6 +53,7 @@ public class TaskManager : MonoBehaviour
         if (activeTask.currentInterceptedDataCount >= activeTask.taskData.interceptedDataCount)
         {
             Debug.Log($"Task [{activeTask.taskData.taskName}] completed!");
+            GameManager.Instance.PlayerWinning();
             // Handle task completion logic here (e.g., reward the player, update UI, etc.)
         }
     }
