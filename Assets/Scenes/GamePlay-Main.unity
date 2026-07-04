@@ -622,7 +622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 201784285}
   - component: {fileID: 201784288}
-  - component: {fileID: 201784287}
+  - component: {fileID: 201784290}
   - component: {fileID: 201784289}
   m_Layer: 0
   m_Name: CinemachineCamera
@@ -646,25 +646,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1355656816}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &201784287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201784284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TrackerSettings:
-    BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
-    AngularDampingMode: 0
-    RotationDamping: {x: 1, y: 1, z: 1}
-    QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 0, z: -10}
 --- !u!114 &201784288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,13 +702,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BoundingShape2D: {fileID: 1180128215}
-  Damping: 0.5
+  Damping: 2.87
   SlowingDistance: 5
   OversizeWindow:
-    Enabled: 1
+    Enabled: 0
     MaxWindowSize: 0
-    Padding: 10
+    Padding: 0
   m_LegacyMaxWindowSize: -2
+--- !u!114 &201784290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201784284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrackerSettings:
+    BindingMode: 4
+    PositionDamping: {x: 0, y: 1, z: 0}
+    AngularDampingMode: 0
+    RotationDamping: {x: 1, y: 1, z: 1}
+    QuaternionDamping: 1
+  FollowOffset: {x: 0, y: 0, z: -10}
 --- !u!1 &214745305
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,8 +1067,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.1, y: 2.98}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 7.1, y: 3.65}
+    newSize: {x: 7.1, y: 3.65}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1119,12 +1119,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -172536021460500528, guid: 42aa18ca80dde9348a0e7aa1b84070e1, type: 3}
+  m_Sprite: {fileID: -9173022697380585963, guid: 611f15fe5cad904468743a1ccefeb3db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 7.1, y: 3.65}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1445,7 +1445,7 @@ MonoBehaviour:
   IgnoreTimeScale: 0
   WorldUpOverride: {fileID: 0}
   ChannelMask: -1
-  UpdateMethod: 2
+  UpdateMethod: 1
   BlendUpdateMethod: 1
   LensModeOverride:
     Enabled: 0
@@ -1719,10 +1719,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.5, y: 0.45}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
-      - {x: 0.50143814, y: 0.45}
+    - - {x: -0.54, y: 0.45}
+      - {x: -0.54, y: -0.68}
+      - {x: 0.54, y: -0.68}
+      - {x: 0.54, y: 0.45}
   m_UseDelaunayMesh: 0
 --- !u!1 &1198692741
 GameObject:
@@ -2047,7 +2047,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0622288faa19b1c45acb6c5220c6e3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxOffsetY: 5
+  cam: {fileID: 709097212}
+  edgeSize: 0.16
+  maxOffset: 20
+  smoothTime: 0.55
 --- !u!4 &1355656816
 Transform:
   m_ObjectHideFlags: 0
@@ -2197,6 +2200,8 @@ MonoBehaviour:
   - {fileID: 1284162144}
   - {fileID: 171746342}
   - {fileID: 1379815898}
+  - {fileID: 841013405}
+  - {fileID: 1234267350}
   dataLevelSO: {fileID: 11400000, guid: a6cc9fb13d7c0754b9f9ad723095dbb0, type: 2}
 --- !u!1 &1533080385
 GameObject:
