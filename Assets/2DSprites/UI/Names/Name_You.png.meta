@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 6e26b6032c7a4f14db3e2570bd49e733
+guid: 6a9cd2d5c4b974f4887452611c8bb415
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2980098991803815094
-    second: DeskScene_UI_CompanyhierarchyPanel_0
+      213: 1898624824285304992
+    second: Name_You_0
+  - first:
+      213: -9006213653316333852
+    second: Name_You_1
+  - first:
+      213: 6601319797908107803
+    second: Name_You_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DeskScene_UI_CompanyhierarchyPanel_0
+      name: Name_You_0
       rect:
         serializedVersion: 2
-        x: 1445
+        x: 0
         y: 0
-        width: 475
-        height: 1080
+        width: 249
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b457f96e307b5920800000000000000
-      internalID: 2980098991803815094
+      spriteID: 0a89345e735495a10800000000000000
+      internalID: 1898624824285304992
       vertices: []
       indices: 
       edges: []
@@ -138,7 +144,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2d589acd6d5f6ba4fb6ae035f609ed5b
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +154,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DeskScene_UI_CompanyhierarchyPanel_0: 2980098991803815094
+      Name_You_0: 1898624824285304992
+      Name_You_1: -9006213653316333852
+      Name_You_2: 6601319797908107803
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
