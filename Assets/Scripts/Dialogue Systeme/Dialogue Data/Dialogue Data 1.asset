@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811825ff733a9a94a939f1a2f580e0cc, type: 3}
+  m_Name: Dialogue Data 1
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  dialogueList:
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Good morning. You must be our new operator.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Yes. It's my first day.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Welcome to the Media & Data Control Division.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Don't worry. Today's just training.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: I'll guide you through your first shift.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Thank you. I appreciate it.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: We recently upgraded our system with AI-integrated software.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: It visualizes internet traffic in real time.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: It also identifies the type of every incoming data packet.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: So the AI already knows which data is harmful?
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Not quite. It detects newly created data and predicts its type.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Once we intercept a packet, the AI can trace every connected copy
+      across the network.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: It reconstructs the entire distribution path, no matter where the
+      data originated.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: That allows other teams to secure every related copy before it
+      spreads further.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: So I only need to intercept one packet?
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: That's right.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: The AI handles the tracing. We make the final decision.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: '{Now listen to me carefully.}(RED)'
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Once you're on your computer, take a look at the {top-right corner
+      of your screen.}(RED)
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: You'll find today's {interception targets}(RED) and how many packets
+      you need to secure.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Data packets travel through fixed network routes.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: '{Wait for the correct packet to pass by}(RED), then {catch it}(RED)
+      as it moves through the traffic.'
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: '{Click and Drag}(RED) the intercepted packet into the {Drop Box}(RED).'
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Be careful {not to collide with other packets}(RED) while intercepting
+      it.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Disturbing normal traffic can interrupt data delivery.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Every unnecessary interception disrupts the network.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: '{Our job is to keep the internet safe without anyone noticing
+      we''re here}(RED).'
+  - nameCharacter: You
+    charType: 0
+    dialogueText: So I need to be accurate... and careful.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Exactly. Accuracy matters more than speed.
+  - nameCharacter: You
+    charType: 0
+    dialogueText: Understood. I'll be careful.
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: "Good. Take your time\u2014it's your first day."
+  - nameCharacter: Alice
+    charType: 1
+    dialogueText: Let's begin your training.
