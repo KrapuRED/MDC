@@ -483,7 +483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 7618855618762899620}
   activationMode: 0
-  levelActive: 0
+  levelActive: 5
 --- !u!114 &9101917541588066697
 MonoBehaviour:
   m_ObjectHideFlags: 0
