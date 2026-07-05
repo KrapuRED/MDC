@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         {
             LevelManager.Instance.LoadScene($"Credit", "CrossFade");
         }
-        else if (level >= 6)
+        else
         {
             LevelManager.Instance.LoadScene($"GamePlay-Main-{level}", "CrossFade");
         }
