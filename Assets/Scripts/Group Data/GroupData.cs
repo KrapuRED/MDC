@@ -20,7 +20,7 @@ public class GroupData : MonoBehaviour
     public void FillGroup(List<DataSpawnConfig> dataSpawnConfig, List<DataType> controlledDatas, Transform endPoint, DataFlowLineSpeed speedMode)
     {
         int maxDataCount = dataSlots.Count;
-        dataCount = Mathf.Clamp(dataCount, 1, maxDataCount);
+        dataCount = maxDataCount;
 
         for (int i = 0; i < dataCount; i++)
         {
