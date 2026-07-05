@@ -28,17 +28,11 @@ public class GameManager : MonoBehaviour
         if (level >= 7)
         {
             LevelManager.Instance.LoadScene($"Credit", "CrossFade");
-            return;
         }
         else if (level >= 6)
         {
-            Debug.Log("Reach the END");
-            level++;
-            LevelManager.Instance.LoadScene($"GamePlay-MainMenu-{level}", "CrossFade");
-            return;
+            LevelManager.Instance.LoadScene($"GamePlay-Main-{level}", "CrossFade");
         }
-
-        LevelManager.Instance.LoadScene($"GamePlay-Main-{level}", "CrossFade");
     }
 
     public void PlayerWinning()
