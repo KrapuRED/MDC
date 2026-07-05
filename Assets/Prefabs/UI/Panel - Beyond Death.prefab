@@ -640,7 +640,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4563856484458568598}
         m_TargetAssemblyTypeName: DeathPanel, Assembly-CSharp
-        m_MethodName: OnClickRetry
+        m_MethodName: OnClickExit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
