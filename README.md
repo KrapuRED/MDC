@@ -10,9 +10,10 @@ Game Engine : Unity 6000.0.60f1
 </div>
 
 ## Key Features <img width="32" height="32" alt="Image" src="https://github.com/user-attachments/assets/1079a5d7-e1ea-43cc-a059-b9c4333c55a2" />
-1. ***Drag and Drop System*** : <br> Select, Drag, and Drop of the datafile.
-2. ***Camera follow*** : <br> Camera able change of position by cursor position.
-3. ***Custom Dialogue System***      : <br> Features custom dialogue scripts complete with immersive text typing effects.
+1. **Drag, Drop, and Crash System**: <br> Select, drag, and drop data files that can collide with each other.
+2. **Camera Follow**: <br> The camera dynamically changes position based on the cursor.
+3. **Data Follow**: <br> Randomizes data patterns.
+4. **Custom Dialogue System**: <br> Features custom dialogue scripts complete with immersive text-typing effects.
 
 ## Team & My Contribution <img width="32" height="32" alt="Image" src="https://github.com/user-attachments/assets/54638a67-ec93-473a-bb3c-dc5184bcad66" />
 | Team Member | Role |
