@@ -29,7 +29,7 @@ My Contribution (AndhikaAtmaja)
 - Created VFX camera Paning via script.
 
 ## Layer / Module Design <img width="32" height="32" alt="Image" src="https://github.com/user-attachments/assets/897ab20c-94d2-4398-ad51-ee0f7859921d" />
-
+<img width="827" height="882" alt="Image" src="https://github.com/user-attachments/assets/9238be9d-cb20-47dd-a191-7f232fb0f784" />
 
 ## Modules and Features <img width="32" height="32" alt="Image" src="https://github.com/user-attachments/assets/718fd774-8614-4ccf-b7f7-297fdcf3c10b" />
 | 📂 Name | 🎬 Scene | 📋 Responsibility |
@@ -47,3 +47,4 @@ My Contribution (AndhikaAtmaja)
 |Task |All MainGame | - Manage and handle task what datafile should be remove |
 
 ## Game Flow <img width="32" height="32" alt="Image" src="https://github.com/user-attachments/assets/7759227f-8383-4a35-8846-ad1af00389c1" />
+<img width="1067" height="1250" alt="Image" src="https://github.com/user-attachments/assets/bc5a9dc8-ecf6-4023-afd9-e42a2d8ea739" />
